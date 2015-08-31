@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eSg-OT-qgg">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController storyboardIdentifier="gameView" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BV1-FR-VrT" customClass="GameViewController" customModule="CrazyBounce" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="maK-i9-Uhn"/>
+                        <viewControllerLayoutGuide type="bottom" id="khH-OB-KpY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best:05&quot;05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIx-Ka-8JR" userLabel="最高分">
+                                <rect key="frame" x="221" y="20" width="158" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CIx-Ka-8JR" secondAttribute="height" multiplier="15:2" id="9H7-wl-uFe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                </variation>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00&quot;00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziD-fC-meO" userLabel="当前分">
+                                <rect key="frame" x="165" y="49" width="270" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ziD-fC-meO" secondAttribute="height" multiplier="15:2" id="EQ8-ez-Z25"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classic Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myp-BX-OF4">
+                                <rect key="frame" x="128" y="264" width="344" height="71"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="80"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65098039220000004" green="0.84705882349999995" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CIx-Ka-8JR" firstAttribute="top" secondItem="maK-i9-Uhn" secondAttribute="bottom" constant="20" id="1cA-Ua-yhd"/>
+                            <constraint firstAttribute="centerX" secondItem="myp-BX-OF4" secondAttribute="centerX" id="KQ2-AQ-QVZ"/>
+                            <constraint firstAttribute="centerX" secondItem="ziD-fC-meO" secondAttribute="centerX" id="khA-8P-fOg"/>
+                            <constraint firstAttribute="centerX" secondItem="CIx-Ka-8JR" secondAttribute="centerX" id="oPr-Su-lGl"/>
+                            <constraint firstItem="ziD-fC-meO" firstAttribute="top" secondItem="CIx-Ka-8JR" secondAttribute="bottom" constant="8" id="xCU-6K-bmh"/>
+                            <constraint firstAttribute="centerY" secondItem="myp-BX-OF4" secondAttribute="centerY" id="xf7-D9-yJc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ygy-cb-ool"/>
+                    <connections>
+                        <outlet property="lbl_GameMode" destination="myp-BX-OF4" id="F8a-mr-0Jr"/>
+                        <outlet property="lbl_bestTime" destination="CIx-Ka-8JR" id="BBM-aC-TGL"/>
+                        <outlet property="lbl_currentTime" destination="ziD-fC-meO" id="Y7Y-s9-tfQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="136"/>
+        </scene>
+        <!--GameBegin-->
+        <scene sceneID="pn7-Kn-aix">
+            <objects>
+                <viewController id="eSg-OT-qgg" userLabel="GameBegin" customClass="gameBeginViewController" customModule="CrazyBounce" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x4P-t1-AlE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lja-a2-omU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YJv-RL-6UO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5b-KV-UQS" userLabel="开始按钮">
+                                <rect key="frame" x="219" y="262" width="177" height="77"/>
+                                <state key="normal" image="ButtonStartImage">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="GameBegin:" destination="eSg-OT-qgg" eventType="touchUpInside" id="BJJ-N1-Rzd"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="LogoImage" translatesAutoresizingMaskIntoConstraints="NO" id="L9b-mV-jhq" userLabel="LOGO">
+                                <rect key="frame" x="192" y="103" width="217" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="L9b-mV-jhq" secondAttribute="height" multiplier="29:17" id="O74-QM-K6q"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65098039220000004" green="0.84705882349999995" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="O5b-KV-UQS" secondAttribute="centerY" id="6Zj-at-7ed" userLabel="开始按钮Y">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="O5b-KV-UQS" secondAttribute="centerX" constant="-7.5" id="9MK-Kz-Dnc" userLabel="开始按钮X轴约束">
+                                <variation key="widthClass=compact" constant="-0.5"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="-8"/>
+                            </constraint>
+                            <constraint firstItem="O5b-KV-UQS" firstAttribute="top" secondItem="L9b-mV-jhq" secondAttribute="bottom" constant="32" id="CJ1-TC-Z4m" userLabel="Logo和Start按钮的间距Y">
+                                <variation key="widthClass=compact" constant="30"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="16"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="L9b-mV-jhq" secondAttribute="centerX" id="blV-iM-RFq" userLabel="LogoX轴约束"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8kr-sB-f8B"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="btn_gameBegin" destination="O5b-KV-UQS" id="pUm-mM-A1h"/>
+                        <outlet property="img_logo" destination="L9b-mV-jhq" id="Qi5-pb-2L5"/>
+                        <segue destination="BV1-FR-VrT" kind="presentation" identifier="gameStart" modalPresentationStyle="fullScreen" animates="NO" id="0QY-1N-eNB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="woO-Zt-bPz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-578" y="136"/>
+        </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="yWL-j2-M8e">
+            <objects>
+                <viewController storyboardIdentifier="gameOverView" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uMZ-fy-fn0" customClass="GameOverViewController" customModule="CrazyBounce" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NwV-4D-EeY"/>
+                        <viewControllerLayoutGuide type="bottom" id="w6G-Eb-GR3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RcW-Ic-cH1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="NewScoreImage" translatesAutoresizingMaskIntoConstraints="NO" id="O4p-QD-u5T" userLabel="新高分">
+                                <rect key="frame" x="454" y="20" width="130" height="130"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST: 05&quot;05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nh3-50-tR7" userLabel="最高分">
+                                <rect key="frame" x="240" y="196" width="120" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="44"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03&quot;03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdt-PE-ljJ" userLabel="当前分">
+                                <rect key="frame" x="198" y="91" width="204" height="95"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" red="0.57647061349999995" green="0.88235300780000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="160"/>
+                                </variation>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="LogoSmallImage" translatesAutoresizingMaskIntoConstraints="NO" id="J9c-XS-lF4" userLabel="左上角的LOGO">
+                                <rect key="frame" x="16" y="20" width="78" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="J9c-XS-lF4" secondAttribute="height" multiplier="39:23" id="EPM-Z5-VbW" userLabel="LOGO保持宽高比"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gi6-SX-gbv" userLabel="重新游戏按钮">
+                                <rect key="frame" x="222" y="262" width="177" height="76"/>
+                                <state key="normal" image="ButtonRestartImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gameRestart:" destination="uMZ-fy-fn0" eventType="touchUpInside" id="j3C-MB-ndb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Classic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Nv-9g-9Ae">
+                                <rect key="frame" x="255" y="47" width="91" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dU-MT-AkE">
+                                <rect key="frame" x="283" y="562" width="34" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65098039220000004" green="0.84705882349999995" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="9dU-MT-AkE" secondAttribute="centerX" id="0hT-cS-445"/>
+                            <constraint firstAttribute="centerX" secondItem="Nh3-50-tR7" secondAttribute="centerX" id="5hk-aT-4wt" userLabel="最高分垂直居中"/>
+                            <constraint firstItem="w6G-Eb-GR3" firstAttribute="top" secondItem="9dU-MT-AkE" secondAttribute="bottom" constant="20" id="7Sc-7D-tUh"/>
+                            <constraint firstItem="rdt-PE-ljJ" firstAttribute="top" secondItem="0Nv-9g-9Ae" secondAttribute="bottom" constant="8" id="90R-w2-xFe">
+                                <variation key="widthClass=compact" constant="4"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="O4p-QD-u5T" secondAttribute="trailing" constant="16" id="B68-Ny-rAA" userLabel="新高分与屏幕右方的距离"/>
+                            <constraint firstItem="J9c-XS-lF4" firstAttribute="leading" secondItem="RcW-Ic-cH1" secondAttribute="leading" constant="16" id="D7L-9U-q6f" userLabel="LOGO与屏幕左方的距离">
+                                <variation key="widthClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="0Nv-9g-9Ae" secondAttribute="centerX" id="I91-ht-CDW"/>
+                            <constraint firstItem="O4p-QD-u5T" firstAttribute="top" secondItem="NwV-4D-EeY" secondAttribute="bottom" constant="20" id="MY3-zd-rgC" userLabel="新高分与屏幕上方的距离"/>
+                            <constraint firstItem="O4p-QD-u5T" firstAttribute="width" secondItem="O4p-QD-u5T" secondAttribute="height" multiplier="1:1" id="NCA-8Y-Dvb" userLabel="新高分保持宽高比"/>
+                            <constraint firstAttribute="centerX" secondItem="Gi6-SX-gbv" secondAttribute="centerX" constant="-10" id="Sf2-53-Wuv" userLabel="重新游戏按钮垂直居中"/>
+                            <constraint firstAttribute="centerX" secondItem="rdt-PE-ljJ" secondAttribute="centerX" id="UGc-8K-YHL" userLabel="当前分垂直居中"/>
+                            <constraint firstItem="Nh3-50-tR7" firstAttribute="top" secondItem="rdt-PE-ljJ" secondAttribute="bottom" constant="10" id="c89-ci-pgT" userLabel="当前分与最高分的距离">
+                                <variation key="widthClass=compact" constant="5"/>
+                            </constraint>
+                            <constraint firstAttribute="centerY" secondItem="Gi6-SX-gbv" secondAttribute="centerY" id="krG-5U-qgM" userLabel="重新游戏按钮水平居中"/>
+                            <constraint firstItem="Gi6-SX-gbv" firstAttribute="top" secondItem="Nh3-50-tR7" secondAttribute="bottom" constant="40" id="sOe-7J-l9w" userLabel="最高分与重新游戏按钮的距离">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="J9c-XS-lF4" firstAttribute="top" secondItem="NwV-4D-EeY" secondAttribute="bottom" constant="20" id="uJG-WT-29n" userLabel="LOGO与屏幕上方的距离">
+                                <variation key="widthClass=compact" constant="10"/>
+                            </constraint>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="img_HighScore" destination="O4p-QD-u5T" id="u6a-I6-jEF"/>
+                        <outlet property="lbl_BestTime" destination="Nh3-50-tR7" id="arf-1U-sZE"/>
+                        <outlet property="lbl_Catalog" destination="9dU-MT-AkE" id="LjF-FS-h5p"/>
+                        <outlet property="lbl_CurrentTime" destination="rdt-PE-ljJ" id="4hq-zJ-9U5"/>
+                        <outlet property="lbl_gamemode" destination="0Nv-9g-9Ae" id="My5-UU-QDO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sqs-5q-ASC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888" y="136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ButtonRestartImage" width="177" height="76"/>
+        <image name="ButtonStartImage" width="177" height="77"/>
+        <image name="LogoImage" width="217" height="127"/>
+        <image name="LogoSmallImage" width="78" height="45"/>
+        <image name="NewScoreImage" width="130" height="130"/>
+    </resources>
+</document>

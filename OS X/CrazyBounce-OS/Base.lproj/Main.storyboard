@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="嗨球" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="嗨球" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="关于“嗨球”" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="隐藏嗨球" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="隐藏其他视图" keyEquivalent="h" id="Vdr-fp-XzO">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="显示全部" id="Kd2-mp-pUS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="退出嗨球" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="游戏" id="dMs-cI-mzQ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="游戏" id="bib-Uj-vzu">
+                                    <items>
+                                        <menuItem title="开始游戏" keyEquivalent="s" id="Was-JA-tGl">
+                                            <connections>
+                                                <action selector="newDocument:" target="Ady-hI-5gd" id="4Si-XN-c54"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="重启游戏" keyEquivalent="r" id="IAo-SY-fd9">
+                                            <connections>
+                                                <action selector="openDocument:" target="Ady-hI-5gd" id="bVn-NM-KNZ"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
+                                        <menuItem title="查看分数" keyEquivalent="c" id="qIS-W8-SiK">
+                                            <connections>
+                                                <action selector="runPageLayout:" target="Ady-hI-5gd" id="Din-rz-gC5"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="分享" keyEquivalent="s" id="aTl-1u-JFS">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="print:" target="Ady-hI-5gd" id="qaZ-4w-aoO"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="帮助" id="wpr-3q-Mcd">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="帮助" systemMenu="help" id="F2S-fz-NVQ">
+                                    <items>
+                                        <menuItem title="查看游戏帮助" keyEquivalent="?" id="FKE-Sm-Kum">
+                                            <connections>
+                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="嗨球" customModuleProvider="target"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="-127"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="嗨球 - 嗨起来的小球" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <rect key="contentRect" x="196" y="239" width="384" height="512"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="249.5"/>
+        </scene>
+        <!--Game Scene View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="GameSceneViewController" customModule="嗨球" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="384" height="512"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="03P-9e-iuf">
+                                <rect key="frame" x="0.0" y="0.0" width="384" height="512"/>
+                                <subviews>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="7N1-Xi-kyt">
+                                        <rect key="frame" x="145" y="236" width="94" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="94" id="Al6-m0-O7U"/>
+                                            <constraint firstAttribute="height" constant="41" id="kiY-o8-dD0"/>
+                                        </constraints>
+                                        <animations/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ButtonStartImage" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="Sd0-Za-0Yi">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="btnBeginPressed:" target="XfG-lQ-9wD" id="K3n-aT-dxE"/>
+                                        </connections>
+                                    </button>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p3G-Ni-Joh">
+                                        <rect key="frame" x="84" y="307" width="217" height="127"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="217" id="PnP-P2-cMp"/>
+                                            <constraint firstAttribute="height" constant="127" id="ZS1-qO-t7l"/>
+                                        </constraints>
+                                        <animations/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="LogoImage" id="Jff-Ir-kHY"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7N1-Xi-kyt" firstAttribute="centerY" secondItem="03P-9e-iuf" secondAttribute="centerY" id="Jpu-qu-Obe"/>
+                                    <constraint firstItem="7N1-Xi-kyt" firstAttribute="top" secondItem="p3G-Ni-Joh" secondAttribute="bottom" constant="30" id="LLZ-Bc-yog"/>
+                                    <constraint firstItem="p3G-Ni-Joh" firstAttribute="centerX" secondItem="03P-9e-iuf" secondAttribute="centerX" id="bys-ch-ujx"/>
+                                    <constraint firstItem="7N1-Xi-kyt" firstAttribute="centerX" secondItem="03P-9e-iuf" secondAttribute="centerX" id="lls-XB-0BS"/>
+                                </constraints>
+                                <animations/>
+                            </customView>
+                            <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGO-KG-grJ" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="384" height="512"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RUF-Lj-x9e">
+                                        <rect key="frame" x="16" y="220" width="352" height="72"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Classic Mode" id="xds-UG-dzN">
+                                            <font key="font" size="60" name="HelveticaNeue-Thin"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RUF-Lj-x9e" firstAttribute="centerX" secondItem="KGO-KG-grJ" secondAttribute="centerX" id="lJw-if-1Sc"/>
+                                    <constraint firstItem="RUF-Lj-x9e" firstAttribute="centerY" secondItem="KGO-KG-grJ" secondAttribute="centerY" id="mFU-Ej-Ljf"/>
+                                </constraints>
+                                <animations/>
+                            </customView>
+                            <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3gc-Qj-rCI">
+                                <rect key="frame" x="0.0" y="0.0" width="384" height="512"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IjP-qv-I9C">
+                                        <rect key="frame" x="16" y="446" width="77" height="46"/>
+                                        <animations/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="LogoImage" id="JgR-TO-Lgu"/>
+                                    </imageView>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l3x-PC-OGI">
+                                        <rect key="frame" x="320" y="444" width="48" height="48"/>
+                                        <animations/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NewScoreImage" id="pJP-Hr-bdC"/>
+                                    </imageView>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="6GK-hF-y3L">
+                                        <rect key="frame" x="145" y="236" width="94" height="41"/>
+                                        <animations/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ButtonRestartImage" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="kUr-Hp-SF9">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="btnRestartPressed:" target="XfG-lQ-9wD" id="NAo-eA-0Un"/>
+                                        </connections>
+                                    </button>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yeD-zM-YhX">
+                                        <rect key="frame" x="163" y="317" width="58" height="27"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="NEx-SB-1aU">
+                                            <font key="font" size="22" name="HelveticaNeue-Thin"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hCx-aJ-dFi">
+                                        <rect key="frame" x="98" y="354" width="188" height="95"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="UDp-qw-AfZ">
+                                            <font key="font" size="80" name="HelveticaNeue-Thin"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dq6-Gz-sqn">
+                                        <rect key="frame" x="156" y="457" width="72" height="36"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="39H-jz-wp9">
+                                            <font key="font" size="30" name="HelveticaNeue-Thin"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7V7-09-UDG">
+                                        <rect key="frame" x="173" y="15" width="38" height="23"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="byF-QL-vkq">
+                                            <font key="font" size="15" name="HelveticaNeue-Thin"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hCx-aJ-dFi" firstAttribute="top" secondItem="Dq6-Gz-sqn" secondAttribute="bottom" constant="8" id="1jz-jI-OCE"/>
+                                    <constraint firstItem="IjP-qv-I9C" firstAttribute="leading" secondItem="3gc-Qj-rCI" secondAttribute="leading" constant="16" id="C6p-B0-cS9"/>
+                                    <constraint firstAttribute="trailing" secondItem="l3x-PC-OGI" secondAttribute="trailing" constant="16" id="CLY-j2-PJd"/>
+                                    <constraint firstItem="Dq6-Gz-sqn" firstAttribute="centerX" secondItem="3gc-Qj-rCI" secondAttribute="centerX" id="LCT-LV-cWS"/>
+                                    <constraint firstItem="l3x-PC-OGI" firstAttribute="top" secondItem="3gc-Qj-rCI" secondAttribute="top" constant="20" id="QaE-R8-WZf"/>
+                                    <constraint firstItem="yeD-zM-YhX" firstAttribute="top" secondItem="hCx-aJ-dFi" secondAttribute="bottom" constant="10" id="VeD-zB-Iwq"/>
+                                    <constraint firstItem="yeD-zM-YhX" firstAttribute="centerX" secondItem="3gc-Qj-rCI" secondAttribute="centerX" id="d0x-tG-2J9"/>
+                                    <constraint firstAttribute="bottom" secondItem="7V7-09-UDG" secondAttribute="bottom" constant="15" id="fD9-2M-LyG"/>
+                                    <constraint firstItem="6GK-hF-y3L" firstAttribute="centerX" secondItem="3gc-Qj-rCI" secondAttribute="centerX" id="gGf-gK-dag"/>
+                                    <constraint firstItem="IjP-qv-I9C" firstAttribute="top" secondItem="3gc-Qj-rCI" secondAttribute="top" constant="20" id="gvP-fg-CH1"/>
+                                    <constraint firstItem="6GK-hF-y3L" firstAttribute="centerY" secondItem="3gc-Qj-rCI" secondAttribute="centerY" id="klX-aA-X9E"/>
+                                    <constraint firstItem="7V7-09-UDG" firstAttribute="centerX" secondItem="3gc-Qj-rCI" secondAttribute="centerX" id="oSP-UM-bO4"/>
+                                    <constraint firstItem="6GK-hF-y3L" firstAttribute="top" secondItem="yeD-zM-YhX" secondAttribute="bottom" constant="40" id="rLI-fm-5hc"/>
+                                    <constraint firstItem="hCx-aJ-dFi" firstAttribute="centerX" secondItem="3gc-Qj-rCI" secondAttribute="centerX" id="wTy-b9-HJd"/>
+                                </constraints>
+                                <animations/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="03P-9e-iuf" secondAttribute="trailing" id="1x3-K8-dD7"/>
+                            <constraint firstItem="03P-9e-iuf" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="9Qn-CY-OUW"/>
+                            <constraint firstAttribute="bottom" secondItem="03P-9e-iuf" secondAttribute="bottom" id="9v7-tJ-hkN"/>
+                            <constraint firstItem="KGO-KG-grJ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="D9A-KL-IdJ"/>
+                            <constraint firstAttribute="trailing" secondItem="3gc-Qj-rCI" secondAttribute="trailing" id="Dsg-a0-oWI"/>
+                            <constraint firstItem="3gc-Qj-rCI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="QUU-hu-Maf"/>
+                            <constraint firstItem="03P-9e-iuf" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="ZMc-NA-YvA"/>
+                            <constraint firstItem="KGO-KG-grJ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="d3t-Rf-7fO"/>
+                            <constraint firstAttribute="bottom" secondItem="3gc-Qj-rCI" secondAttribute="bottom" id="j2u-Fh-fO1"/>
+                            <constraint firstAttribute="bottom" secondItem="KGO-KG-grJ" secondAttribute="bottom" id="psu-cg-YTU"/>
+                            <constraint firstItem="3gc-Qj-rCI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="u97-o5-h6R"/>
+                            <constraint firstAttribute="trailing" secondItem="KGO-KG-grJ" secondAttribute="trailing" id="yLF-lv-Sog"/>
+                        </constraints>
+                        <animations/>
+                    </view>
+                    <connections>
+                        <outlet property="btnGameBegin" destination="7N1-Xi-kyt" id="icJ-qv-OvH"/>
+                        <outlet property="gameBeginView" destination="03P-9e-iuf" id="wC2-BW-A3C"/>
+                        <outlet property="gameEndView" destination="3gc-Qj-rCI" id="8cf-2H-jjf"/>
+                        <outlet property="gameView" destination="KGO-KG-grJ" id="hU1-jT-ogF"/>
+                        <outlet property="imgLogo" destination="p3G-Ni-Joh" id="wVA-kf-oBN"/>
+                        <outlet property="imgNewHighScore" destination="l3x-PC-OGI" id="9cc-cd-QuS"/>
+                        <outlet property="lblBestTime" destination="yeD-zM-YhX" id="dVg-UT-YGy"/>
+                        <outlet property="lblCurrentMode" destination="Dq6-Gz-sqn" id="rQ3-st-2uG"/>
+                        <outlet property="lblCurrentTime" destination="hCx-aJ-dFi" id="Pwd-hn-NRk"/>
+                        <outlet property="lblGamemode" destination="RUF-Lj-x9e" id="b5N-zo-1Wf"/>
+                        <outlet property="lblTips" destination="7V7-09-UDG" id="AMA-ng-9V2"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="878"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ButtonRestartImage" width="93.865028381347656" height="40.638038635253906"/>
+        <image name="ButtonStartImage" width="93.865028381347656" height="40.858894348144531"/>
+        <image name="LogoImage" width="76.858894348144531" height="45.055213928222656"/>
+        <image name="NewScoreImage" width="47.926380157470703" height="47.926380157470703"/>
+    </resources>
+</document>

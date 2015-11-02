@@ -7,91 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		734AB9FC1A35690700BF5B9C /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734AB9FB1A35690700BF5B9C /* Ball.swift */; };
 		7359E1121A3437F700C5D6C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7359E1111A3437F700C5D6C0 /* AppDelegate.swift */; };
-		7359E1161A3437F700C5D6C0 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7359E1151A3437F700C5D6C0 /* GameScene.swift */; };
-		7359E1181A3437F700C5D6C0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7359E1171A3437F700C5D6C0 /* GameViewController.swift */; };
 		7359E11B1A3437F700C5D6C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7359E1191A3437F700C5D6C0 /* Main.storyboard */; };
-		7359E11D1A3437F700C5D6C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7359E11C1A3437F700C5D6C0 /* Images.xcassets */; };
-		7359E12C1A3437F700C5D6C0 /* CrazyBounceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7359E12B1A3437F700C5D6C0 /* CrazyBounceTests.swift */; };
-		7359E1361A343A6700C5D6C0 /* GameBeginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7359E1351A343A6700C5D6C0 /* GameBeginViewController.swift */; };
-		7359E13A1A343AFE00C5D6C0 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7359E1391A343AFE00C5D6C0 /* Wave.swift */; };
-		7359E13D1A34A21600C5D6C0 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7359E13C1A34A21600C5D6C0 /* Bar.swift */; };
-		737F0DE11A591AF3005E81A5 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F0DE01A591AF3005E81A5 /* Tips.swift */; };
-		73A02D221A57AE6500B2B6BB /* AllCleanBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A02D211A57AE6500B2B6BB /* AllCleanBall.swift */; };
-		73A804E01A57CAF100FF07B4 /* LongBarBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A804DF1A57CAF100FF07B4 /* LongBarBall.swift */; };
-		73A804E21A57D05800FF07B4 /* SlowBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A804E11A57D05800FF07B4 /* SlowBall.swift */; };
-		73D4A8981A518FE700D3A39C /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4A8971A518FE700D3A39C /* GameOverViewController.swift */; };
-		73D4A89C1A51AEF400D3A39C /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4A89B1A51AEF400D3A39C /* FileManager.swift */; };
-		73EEE96A1A35A6D100CA34B1 /* NodeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EEE9691A35A6D100CA34B1 /* NodeCategory.swift */; };
-		D83BBDAE1BE6FABD00603000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BBDAD1BE6FABD00603000 /* AppDelegate.swift */; };
-		D83BBDB01BE6FABD00603000 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BBDAF1BE6FABD00603000 /* GameScene.swift */; };
-		D83BBDB21BE6FABD00603000 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D83BBDB11BE6FABD00603000 /* GameScene.sks */; };
-		D83BBDB41BE6FABD00603000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D83BBDB31BE6FABD00603000 /* Assets.xcassets */; };
-		D83BBDB71BE6FABD00603000 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D83BBDB51BE6FABD00603000 /* MainMenu.xib */; };
-		D83BBDC21BE6FABE00603000 /* CrazyBounce_OSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BBDC11BE6FABE00603000 /* CrazyBounce_OSTests.swift */; };
-		D83BBDCD1BE6FABE00603000 /* CrazyBounce_OSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BBDCC1BE6FABE00603000 /* CrazyBounce_OSUITests.swift */; };
+		D826653F1BE73CFF0088FDE9 /* AllCleanBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665341BE73CFF0088FDE9 /* AllCleanBall.swift */; };
+		D82665401BE73CFF0088FDE9 /* AllCleanBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665341BE73CFF0088FDE9 /* AllCleanBall.swift */; };
+		D82665411BE73CFF0088FDE9 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665351BE73CFF0088FDE9 /* Ball.swift */; };
+		D82665421BE73CFF0088FDE9 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665351BE73CFF0088FDE9 /* Ball.swift */; };
+		D82665431BE73CFF0088FDE9 /* LongBarBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665361BE73CFF0088FDE9 /* LongBarBall.swift */; };
+		D82665441BE73CFF0088FDE9 /* LongBarBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665361BE73CFF0088FDE9 /* LongBarBall.swift */; };
+		D82665451BE73CFF0088FDE9 /* NormalBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665371BE73CFF0088FDE9 /* NormalBall.swift */; };
+		D82665461BE73CFF0088FDE9 /* NormalBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665371BE73CFF0088FDE9 /* NormalBall.swift */; };
+		D82665471BE73CFF0088FDE9 /* SlowBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665381BE73CFF0088FDE9 /* SlowBall.swift */; };
+		D82665481BE73CFF0088FDE9 /* SlowBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665381BE73CFF0088FDE9 /* SlowBall.swift */; };
+		D82665491BE73CFF0088FDE9 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826653A1BE73CFF0088FDE9 /* Bar.swift */; };
+		D826654A1BE73CFF0088FDE9 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826653A1BE73CFF0088FDE9 /* Bar.swift */; };
+		D826654B1BE73CFF0088FDE9 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826653B1BE73CFF0088FDE9 /* FileManager.swift */; };
+		D826654C1BE73CFF0088FDE9 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826653B1BE73CFF0088FDE9 /* FileManager.swift */; };
+		D826654D1BE73CFF0088FDE9 /* GameElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826653C1BE73CFF0088FDE9 /* GameElements.swift */; };
+		D826654E1BE73CFF0088FDE9 /* GameElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826653C1BE73CFF0088FDE9 /* GameElements.swift */; };
+		D826654F1BE73CFF0088FDE9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826653D1BE73CFF0088FDE9 /* GameScene.swift */; };
+		D82665511BE73CFF0088FDE9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D826653E1BE73CFF0088FDE9 /* Images.xcassets */; };
+		D82665521BE73CFF0088FDE9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D826653E1BE73CFF0088FDE9 /* Images.xcassets */; };
+		D826655D1BE7423A0088FDE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665551BE7423A0088FDE9 /* AppDelegate.swift */; };
+		D826655E1BE7423A0088FDE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82665561BE7423A0088FDE9 /* Main.storyboard */; };
+		D826655F1BE7423A0088FDE9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D826655B1BE7423A0088FDE9 /* Info.plist */; };
+		D82665601BE7423A0088FDE9 /* GameSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826655C1BE7423A0088FDE9 /* GameSceneViewController.swift */; };
+		D82665631BE748200088FDE9 /* WaterWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665621BE748200088FDE9 /* WaterWaveView.swift */; };
+		D82665651BE74A850088FDE9 /* NSBezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665641BE74A850088FDE9 /* NSBezierPathExtension.swift */; };
+		D826659F1BE7790F0088FDE9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826653D1BE73CFF0088FDE9 /* GameScene.swift */; };
+		D83BBE361BE7174D00603000 /* GameBeginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BBE291BE7174D00603000 /* GameBeginViewController.swift */; };
+		D83BBE371BE7174D00603000 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BBE2A1BE7174D00603000 /* GameOverViewController.swift */; };
+		D83BBE381BE7174D00603000 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BBE2B1BE7174D00603000 /* GameViewController.swift */; };
+		D83BBE391BE7174D00603000 /* WaterWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BBE2E1BE7174D00603000 /* WaterWaveView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		7359E1261A3437F700C5D6C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7359E1041A3437F700C5D6C0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7359E10B1A3437F700C5D6C0;
-			remoteInfo = CrazyBounce;
-		};
-		D83BBDBE1BE6FABE00603000 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7359E1041A3437F700C5D6C0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D83BBDAA1BE6FABD00603000;
-			remoteInfo = "CrazyBounce-OS";
-		};
-		D83BBDC91BE6FABE00603000 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7359E1041A3437F700C5D6C0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D83BBDAA1BE6FABD00603000;
-			remoteInfo = "CrazyBounce-OS";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		734AB9FB1A35690700BF5B9C /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ball.swift; path = "Game Elements/Ball/Ball.swift"; sourceTree = "<group>"; };
 		7359E10C1A3437F700C5D6C0 /* CrazyBounce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrazyBounce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7359E1101A3437F700C5D6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7359E1111A3437F700C5D6C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7359E1151A3437F700C5D6C0 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		7359E1171A3437F700C5D6C0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		7359E11A1A3437F700C5D6C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7359E11C1A3437F700C5D6C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		7359E1251A3437F700C5D6C0 /* CrazyBounceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrazyBounceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7359E12A1A3437F700C5D6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7359E12B1A3437F700C5D6C0 /* CrazyBounceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyBounceTests.swift; sourceTree = "<group>"; };
-		7359E1351A343A6700C5D6C0 /* GameBeginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBeginViewController.swift; sourceTree = "<group>"; };
-		7359E1391A343AFE00C5D6C0 /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wave.swift; path = "Game Elements/Background - Wave/Wave.swift"; sourceTree = "<group>"; };
-		7359E13C1A34A21600C5D6C0 /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bar.swift; path = "Game Elements/Bar/Bar.swift"; sourceTree = "<group>"; };
-		737F0DE01A591AF3005E81A5 /* Tips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
-		73A02D211A57AE6500B2B6BB /* AllCleanBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCleanBall.swift; sourceTree = "<group>"; };
-		73A804DF1A57CAF100FF07B4 /* LongBarBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongBarBall.swift; sourceTree = "<group>"; };
-		73A804E11A57D05800FF07B4 /* SlowBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlowBall.swift; sourceTree = "<group>"; };
-		73D4A8971A518FE700D3A39C /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
-		73D4A89B1A51AEF400D3A39C /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
-		73EEE9691A35A6D100CA34B1 /* NodeCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeCategory.swift; sourceTree = "<group>"; };
-		D83BBDAB1BE6FABD00603000 /* CrazyBounce-OS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrazyBounce-OS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D83BBDAD1BE6FABD00603000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D83BBDAF1BE6FABD00603000 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		D83BBDB11BE6FABD00603000 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		D83BBDB31BE6FABD00603000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D83BBDB61BE6FABD00603000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		D83BBDB81BE6FABD00603000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D83BBDBD1BE6FABE00603000 /* CrazyBounce-OSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CrazyBounce-OSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D83BBDC11BE6FABE00603000 /* CrazyBounce_OSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyBounce_OSTests.swift; sourceTree = "<group>"; };
-		D83BBDC31BE6FABE00603000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D83BBDC81BE6FABE00603000 /* CrazyBounce-OSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CrazyBounce-OSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D83BBDCC1BE6FABE00603000 /* CrazyBounce_OSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyBounce_OSUITests.swift; sourceTree = "<group>"; };
-		D83BBDCE1BE6FABE00603000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D82665341BE73CFF0088FDE9 /* AllCleanBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCleanBall.swift; sourceTree = "<group>"; };
+		D82665351BE73CFF0088FDE9 /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
+		D82665361BE73CFF0088FDE9 /* LongBarBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongBarBall.swift; sourceTree = "<group>"; };
+		D82665371BE73CFF0088FDE9 /* NormalBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalBall.swift; sourceTree = "<group>"; };
+		D82665381BE73CFF0088FDE9 /* SlowBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlowBall.swift; sourceTree = "<group>"; };
+		D826653A1BE73CFF0088FDE9 /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
+		D826653B1BE73CFF0088FDE9 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		D826653C1BE73CFF0088FDE9 /* GameElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameElements.swift; sourceTree = "<group>"; };
+		D826653D1BE73CFF0088FDE9 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		D826653E1BE73CFF0088FDE9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D82665551BE7423A0088FDE9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D82665571BE7423A0088FDE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D826655B1BE7423A0088FDE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D826655C1BE7423A0088FDE9 /* GameSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSceneViewController.swift; sourceTree = "<group>"; };
+		D82665621BE748200088FDE9 /* WaterWaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaterWaveView.swift; path = GameElements/WaterWaveView.swift; sourceTree = "<group>"; };
+		D82665641BE74A850088FDE9 /* NSBezierPathExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBezierPathExtension.swift; sourceTree = "<group>"; };
+		D83BBDE01BE7104800603000 /* 嗨球.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "嗨球.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D83BBE291BE7174D00603000 /* GameBeginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBeginViewController.swift; sourceTree = "<group>"; };
+		D83BBE2A1BE7174D00603000 /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		D83BBE2B1BE7174D00603000 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		D83BBE2E1BE7174D00603000 /* WaterWaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaterWaveView.swift; path = "Background - Wave/WaterWaveView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,28 +79,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7359E1221A3437F700C5D6C0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D83BBDA81BE6FABD00603000 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D83BBDBA1BE6FABE00603000 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D83BBDC51BE6FABE00603000 /* Frameworks */ = {
+		D83BBDDD1BE7104800603000 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,22 +89,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		734AB9FA1A3568F000BF5B9C /* Ball */ = {
-			isa = PBXGroup;
-			children = (
-				734AB9FB1A35690700BF5B9C /* Ball.swift */,
-				73A02D211A57AE6500B2B6BB /* AllCleanBall.swift */,
-				73A804DF1A57CAF100FF07B4 /* LongBarBall.swift */,
-				73A804E11A57D05800FF07B4 /* SlowBall.swift */,
-			);
-			name = Ball;
-			sourceTree = "<group>";
-		};
 		7359E1031A3437F700C5D6C0 = {
 			isa = PBXGroup;
 			children = (
+				D82665321BE73CFF0088FDE9 /* Game Elements */,
 				D83BBDA51BE6FA7300603000 /* iOS */,
-				D83BBDA61BE6FA9500603000 /* OS X */,
+				D82665531BE7423A0088FDE9 /* OS X */,
 				7359E10D1A3437F700C5D6C0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -157,10 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				7359E10C1A3437F700C5D6C0 /* CrazyBounce.app */,
-				7359E1251A3437F700C5D6C0 /* CrazyBounceTests.xctest */,
-				D83BBDAB1BE6FABD00603000 /* CrazyBounce-OS.app */,
-				D83BBDBD1BE6FABE00603000 /* CrazyBounce-OSTests.xctest */,
-				D83BBDC81BE6FABE00603000 /* CrazyBounce-OSUITests.xctest */,
+				D83BBDE01BE7104800603000 /* 嗨球.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,12 +111,10 @@
 		7359E10E1A3437F700C5D6C0 /* CrazyBounce */ = {
 			isa = PBXGroup;
 			children = (
-				7359E1371A343AC500C5D6C0 /* Game Elements */,
-				73EEE96D1A35BEAC00CA34B1 /* GameScene */,
-				D815ADBC1B93E6F100F63254 /* Controllers */,
+				D83BBE281BE7174D00603000 /* Controllers */,
+				D83BBE2C1BE7174D00603000 /* Game Elements */,
 				7359E1111A3437F700C5D6C0 /* AppDelegate.swift */,
 				7359E1191A3437F700C5D6C0 /* Main.storyboard */,
-				7359E11C1A3437F700C5D6C0 /* Images.xcassets */,
 				7359E10F1A3437F700C5D6C0 /* Supporting Files */,
 			);
 			path = CrazyBounce;
@@ -204,51 +145,90 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7359E1371A343AC500C5D6C0 /* Game Elements */ = {
+		D82665321BE73CFF0088FDE9 /* Game Elements */ = {
 			isa = PBXGroup;
 			children = (
-				73EEE9691A35A6D100CA34B1 /* NodeCategory.swift */,
-				73D4A89B1A51AEF400D3A39C /* FileManager.swift */,
-				737F0DE01A591AF3005E81A5 /* Tips.swift */,
-				734AB9FA1A3568F000BF5B9C /* Ball */,
-				7359E13B1A34A20000C5D6C0 /* Bar */,
-				7359E1381A343AD000C5D6C0 /* Background - Wave */,
+				D82665331BE73CFF0088FDE9 /* Ball */,
+				D82665391BE73CFF0088FDE9 /* Bar */,
+				D826653B1BE73CFF0088FDE9 /* FileManager.swift */,
+				D826653C1BE73CFF0088FDE9 /* GameElements.swift */,
+				D826653D1BE73CFF0088FDE9 /* GameScene.swift */,
+				D826653E1BE73CFF0088FDE9 /* Images.xcassets */,
+			);
+			path = "Game Elements";
+			sourceTree = "<group>";
+		};
+		D82665331BE73CFF0088FDE9 /* Ball */ = {
+			isa = PBXGroup;
+			children = (
+				D82665341BE73CFF0088FDE9 /* AllCleanBall.swift */,
+				D82665351BE73CFF0088FDE9 /* Ball.swift */,
+				D82665361BE73CFF0088FDE9 /* LongBarBall.swift */,
+				D82665371BE73CFF0088FDE9 /* NormalBall.swift */,
+				D82665381BE73CFF0088FDE9 /* SlowBall.swift */,
+			);
+			path = Ball;
+			sourceTree = "<group>";
+		};
+		D82665391BE73CFF0088FDE9 /* Bar */ = {
+			isa = PBXGroup;
+			children = (
+				D826653A1BE73CFF0088FDE9 /* Bar.swift */,
+			);
+			path = Bar;
+			sourceTree = "<group>";
+		};
+		D82665531BE7423A0088FDE9 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				D82665541BE7423A0088FDE9 /* CrazyBounce-OS */,
+			);
+			path = "OS X";
+			sourceTree = "<group>";
+		};
+		D82665541BE7423A0088FDE9 /* CrazyBounce-OS */ = {
+			isa = PBXGroup;
+			children = (
+				D826655C1BE7423A0088FDE9 /* GameSceneViewController.swift */,
+				D82665611BE748050088FDE9 /* Game Elements */,
+				D82665551BE7423A0088FDE9 /* AppDelegate.swift */,
+				D82665561BE7423A0088FDE9 /* Main.storyboard */,
+				D82665581BE7423A0088FDE9 /* GameElements */,
+				D826655B1BE7423A0088FDE9 /* Info.plist */,
+			);
+			path = "CrazyBounce-OS";
+			sourceTree = "<group>";
+		};
+		D82665581BE7423A0088FDE9 /* GameElements */ = {
+			isa = PBXGroup;
+			children = (
+				D82665591BE7423A0088FDE9 /* Ball */,
+				D826655A1BE7423A0088FDE9 /* Bar */,
+			);
+			path = GameElements;
+			sourceTree = "<group>";
+		};
+		D82665591BE7423A0088FDE9 /* Ball */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ball;
+			sourceTree = "<group>";
+		};
+		D826655A1BE7423A0088FDE9 /* Bar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bar;
+			sourceTree = "<group>";
+		};
+		D82665611BE748050088FDE9 /* Game Elements */ = {
+			isa = PBXGroup;
+			children = (
+				D82665641BE74A850088FDE9 /* NSBezierPathExtension.swift */,
+				D82665621BE748200088FDE9 /* WaterWaveView.swift */,
 			);
 			name = "Game Elements";
-			sourceTree = "<group>";
-		};
-		7359E1381A343AD000C5D6C0 /* Background - Wave */ = {
-			isa = PBXGroup;
-			children = (
-				7359E1391A343AFE00C5D6C0 /* Wave.swift */,
-			);
-			name = "Background - Wave";
-			sourceTree = "<group>";
-		};
-		7359E13B1A34A20000C5D6C0 /* Bar */ = {
-			isa = PBXGroup;
-			children = (
-				7359E13C1A34A21600C5D6C0 /* Bar.swift */,
-			);
-			name = Bar;
-			sourceTree = "<group>";
-		};
-		73EEE96D1A35BEAC00CA34B1 /* GameScene */ = {
-			isa = PBXGroup;
-			children = (
-				7359E1151A3437F700C5D6C0 /* GameScene.swift */,
-			);
-			name = GameScene;
-			sourceTree = "<group>";
-		};
-		D815ADBC1B93E6F100F63254 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				7359E1351A343A6700C5D6C0 /* GameBeginViewController.swift */,
-				7359E1171A3437F700C5D6C0 /* GameViewController.swift */,
-				73D4A8971A518FE700D3A39C /* GameOverViewController.swift */,
-			);
-			name = Controllers;
 			sourceTree = "<group>";
 		};
 		D83BBDA51BE6FA7300603000 /* iOS */ = {
@@ -260,48 +240,22 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		D83BBDA61BE6FA9500603000 /* OS X */ = {
+		D83BBE281BE7174D00603000 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D83BBDAC1BE6FABD00603000 /* CrazyBounce-OS */,
-				D83BBDC01BE6FABE00603000 /* CrazyBounce-OSTests */,
-				D83BBDCB1BE6FABE00603000 /* CrazyBounce-OSUITests */,
+				D83BBE291BE7174D00603000 /* GameBeginViewController.swift */,
+				D83BBE2A1BE7174D00603000 /* GameOverViewController.swift */,
+				D83BBE2B1BE7174D00603000 /* GameViewController.swift */,
 			);
-			path = "OS X";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		D83BBDAC1BE6FABD00603000 /* CrazyBounce-OS */ = {
+		D83BBE2C1BE7174D00603000 /* Game Elements */ = {
 			isa = PBXGroup;
 			children = (
-				D83BBDAD1BE6FABD00603000 /* AppDelegate.swift */,
-				D83BBDAF1BE6FABD00603000 /* GameScene.swift */,
-				D83BBDB11BE6FABD00603000 /* GameScene.sks */,
-				D83BBDB31BE6FABD00603000 /* Assets.xcassets */,
-				D83BBDB51BE6FABD00603000 /* MainMenu.xib */,
-				D83BBDB81BE6FABD00603000 /* Info.plist */,
+				D83BBE2E1BE7174D00603000 /* WaterWaveView.swift */,
 			);
-			name = "CrazyBounce-OS";
-			path = "../CrazyBounce-OS";
-			sourceTree = "<group>";
-		};
-		D83BBDC01BE6FABE00603000 /* CrazyBounce-OSTests */ = {
-			isa = PBXGroup;
-			children = (
-				D83BBDC11BE6FABE00603000 /* CrazyBounce_OSTests.swift */,
-				D83BBDC31BE6FABE00603000 /* Info.plist */,
-			);
-			name = "CrazyBounce-OSTests";
-			path = "../CrazyBounce-OSTests";
-			sourceTree = "<group>";
-		};
-		D83BBDCB1BE6FABE00603000 /* CrazyBounce-OSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D83BBDCC1BE6FABE00603000 /* CrazyBounce_OSUITests.swift */,
-				D83BBDCE1BE6FABE00603000 /* Info.plist */,
-			);
-			name = "CrazyBounce-OSUITests";
-			path = "../CrazyBounce-OSUITests";
+			path = "Game Elements";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,31 +278,13 @@
 			productReference = 7359E10C1A3437F700C5D6C0 /* CrazyBounce.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7359E1241A3437F700C5D6C0 /* CrazyBounceTests */ = {
+		D83BBDDF1BE7104800603000 /* CrazyBounce-OS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7359E1321A3437F700C5D6C0 /* Build configuration list for PBXNativeTarget "CrazyBounceTests" */;
+			buildConfigurationList = D83BBE021BE7104800603000 /* Build configuration list for PBXNativeTarget "CrazyBounce-OS" */;
 			buildPhases = (
-				7359E1211A3437F700C5D6C0 /* Sources */,
-				7359E1221A3437F700C5D6C0 /* Frameworks */,
-				7359E1231A3437F700C5D6C0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7359E1271A3437F700C5D6C0 /* PBXTargetDependency */,
-			);
-			name = CrazyBounceTests;
-			productName = CrazyBounceTests;
-			productReference = 7359E1251A3437F700C5D6C0 /* CrazyBounceTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D83BBDAA1BE6FABD00603000 /* CrazyBounce-OS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D83BBDCF1BE6FABE00603000 /* Build configuration list for PBXNativeTarget "CrazyBounce-OS" */;
-			buildPhases = (
-				D83BBDA71BE6FABD00603000 /* Sources */,
-				D83BBDA81BE6FABD00603000 /* Frameworks */,
-				D83BBDA91BE6FABD00603000 /* Resources */,
+				D83BBDDC1BE7104800603000 /* Sources */,
+				D83BBDDD1BE7104800603000 /* Frameworks */,
+				D83BBDDE1BE7104800603000 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -356,44 +292,8 @@
 			);
 			name = "CrazyBounce-OS";
 			productName = "CrazyBounce-OS";
-			productReference = D83BBDAB1BE6FABD00603000 /* CrazyBounce-OS.app */;
+			productReference = D83BBDE01BE7104800603000 /* 嗨球.app */;
 			productType = "com.apple.product-type.application";
-		};
-		D83BBDBC1BE6FABE00603000 /* CrazyBounce-OSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D83BBDD21BE6FABE00603000 /* Build configuration list for PBXNativeTarget "CrazyBounce-OSTests" */;
-			buildPhases = (
-				D83BBDB91BE6FABE00603000 /* Sources */,
-				D83BBDBA1BE6FABE00603000 /* Frameworks */,
-				D83BBDBB1BE6FABE00603000 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D83BBDBF1BE6FABE00603000 /* PBXTargetDependency */,
-			);
-			name = "CrazyBounce-OSTests";
-			productName = "CrazyBounce-OSTests";
-			productReference = D83BBDBD1BE6FABE00603000 /* CrazyBounce-OSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D83BBDC71BE6FABE00603000 /* CrazyBounce-OSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D83BBDD51BE6FABE00603000 /* Build configuration list for PBXNativeTarget "CrazyBounce-OSUITests" */;
-			buildPhases = (
-				D83BBDC41BE6FABE00603000 /* Sources */,
-				D83BBDC51BE6FABE00603000 /* Frameworks */,
-				D83BBDC61BE6FABE00603000 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D83BBDCA1BE6FABE00603000 /* PBXTargetDependency */,
-			);
-			name = "CrazyBounce-OSUITests";
-			productName = "CrazyBounce-OSUITests";
-			productReference = D83BBDC81BE6FABE00603000 /* CrazyBounce-OSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -403,27 +303,16 @@
 			attributes = {
 				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "益行人-星夜暮晨";
 				TargetAttributes = {
 					7359E10B1A3437F700C5D6C0 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = KNTXK6TU24;
 					};
-					7359E1241A3437F700C5D6C0 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 7359E10B1A3437F700C5D6C0;
-					};
-					D83BBDAA1BE6FABD00603000 = {
+					D83BBDDF1BE7104800603000 = {
 						CreatedOnToolsVersion = 7.1;
-					};
-					D83BBDBC1BE6FABE00603000 = {
-						CreatedOnToolsVersion = 7.1;
-						TestTargetID = D83BBDAA1BE6FABD00603000;
-					};
-					D83BBDC71BE6FABE00603000 = {
-						CreatedOnToolsVersion = 7.1;
-						TestTargetID = D83BBDAA1BE6FABD00603000;
+						DevelopmentTeam = BBCY8DNHJY;
 					};
 				};
 			};
@@ -432,7 +321,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = 7359E1031A3437F700C5D6C0;
@@ -441,10 +329,7 @@
 			projectRoot = "";
 			targets = (
 				7359E10B1A3437F700C5D6C0 /* CrazyBounce */,
-				7359E1241A3437F700C5D6C0 /* CrazyBounceTests */,
-				D83BBDAA1BE6FABD00603000 /* CrazyBounce-OS */,
-				D83BBDBC1BE6FABE00603000 /* CrazyBounce-OSTests */,
-				D83BBDC71BE6FABE00603000 /* CrazyBounce-OSUITests */,
+				D83BBDDF1BE7104800603000 /* CrazyBounce-OS */,
 			);
 		};
 /* End PBXProject section */
@@ -454,39 +339,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7359E11D1A3437F700C5D6C0 /* Images.xcassets in Resources */,
 				7359E11B1A3437F700C5D6C0 /* Main.storyboard in Resources */,
+				D82665511BE73CFF0088FDE9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7359E1231A3437F700C5D6C0 /* Resources */ = {
+		D83BBDDE1BE7104800603000 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D83BBDA91BE6FABD00603000 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D83BBDB41BE6FABD00603000 /* Assets.xcassets in Resources */,
-				D83BBDB21BE6FABD00603000 /* GameScene.sks in Resources */,
-				D83BBDB71BE6FABD00603000 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D83BBDBB1BE6FABE00603000 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D83BBDC61BE6FABE00603000 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				D82665521BE73CFF0088FDE9 /* Images.xcassets in Resources */,
+				D826655E1BE7423A0088FDE9 /* Main.storyboard in Resources */,
+				D826655F1BE7423A0088FDE9 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,75 +361,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				734AB9FC1A35690700BF5B9C /* Ball.swift in Sources */,
-				73A804E21A57D05800FF07B4 /* SlowBall.swift in Sources */,
-				7359E1161A3437F700C5D6C0 /* GameScene.swift in Sources */,
-				7359E13D1A34A21600C5D6C0 /* Bar.swift in Sources */,
-				7359E13A1A343AFE00C5D6C0 /* Wave.swift in Sources */,
-				7359E1181A3437F700C5D6C0 /* GameViewController.swift in Sources */,
-				73D4A89C1A51AEF400D3A39C /* FileManager.swift in Sources */,
-				73A02D221A57AE6500B2B6BB /* AllCleanBall.swift in Sources */,
-				7359E1361A343A6700C5D6C0 /* GameBeginViewController.swift in Sources */,
-				73EEE96A1A35A6D100CA34B1 /* NodeCategory.swift in Sources */,
-				73A804E01A57CAF100FF07B4 /* LongBarBall.swift in Sources */,
-				737F0DE11A591AF3005E81A5 /* Tips.swift in Sources */,
+				D83BBE391BE7174D00603000 /* WaterWaveView.swift in Sources */,
+				D826654D1BE73CFF0088FDE9 /* GameElements.swift in Sources */,
+				D83BBE381BE7174D00603000 /* GameViewController.swift in Sources */,
+				D82665491BE73CFF0088FDE9 /* Bar.swift in Sources */,
+				D826654B1BE73CFF0088FDE9 /* FileManager.swift in Sources */,
+				D83BBE371BE7174D00603000 /* GameOverViewController.swift in Sources */,
+				D82665471BE73CFF0088FDE9 /* SlowBall.swift in Sources */,
 				7359E1121A3437F700C5D6C0 /* AppDelegate.swift in Sources */,
-				73D4A8981A518FE700D3A39C /* GameOverViewController.swift in Sources */,
+				D82665451BE73CFF0088FDE9 /* NormalBall.swift in Sources */,
+				D82665431BE73CFF0088FDE9 /* LongBarBall.swift in Sources */,
+				D826653F1BE73CFF0088FDE9 /* AllCleanBall.swift in Sources */,
+				D82665411BE73CFF0088FDE9 /* Ball.swift in Sources */,
+				D826654F1BE73CFF0088FDE9 /* GameScene.swift in Sources */,
+				D83BBE361BE7174D00603000 /* GameBeginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7359E1211A3437F700C5D6C0 /* Sources */ = {
+		D83BBDDC1BE7104800603000 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7359E12C1A3437F700C5D6C0 /* CrazyBounceTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D83BBDA71BE6FABD00603000 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D83BBDB01BE6FABD00603000 /* GameScene.swift in Sources */,
-				D83BBDAE1BE6FABD00603000 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D83BBDB91BE6FABE00603000 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D83BBDC21BE6FABE00603000 /* CrazyBounce_OSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D83BBDC41BE6FABE00603000 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D83BBDCD1BE6FABE00603000 /* CrazyBounce_OSUITests.swift in Sources */,
+				D82665601BE7423A0088FDE9 /* GameSceneViewController.swift in Sources */,
+				D826654E1BE73CFF0088FDE9 /* GameElements.swift in Sources */,
+				D82665441BE73CFF0088FDE9 /* LongBarBall.swift in Sources */,
+				D826654A1BE73CFF0088FDE9 /* Bar.swift in Sources */,
+				D826655D1BE7423A0088FDE9 /* AppDelegate.swift in Sources */,
+				D82665631BE748200088FDE9 /* WaterWaveView.swift in Sources */,
+				D82665651BE74A850088FDE9 /* NSBezierPathExtension.swift in Sources */,
+				D82665481BE73CFF0088FDE9 /* SlowBall.swift in Sources */,
+				D826659F1BE7790F0088FDE9 /* GameScene.swift in Sources */,
+				D82665461BE73CFF0088FDE9 /* NormalBall.swift in Sources */,
+				D82665421BE73CFF0088FDE9 /* Ball.swift in Sources */,
+				D826654C1BE73CFF0088FDE9 /* FileManager.swift in Sources */,
+				D82665401BE73CFF0088FDE9 /* AllCleanBall.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7359E1271A3437F700C5D6C0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7359E10B1A3437F700C5D6C0 /* CrazyBounce */;
-			targetProxy = 7359E1261A3437F700C5D6C0 /* PBXContainerItemProxy */;
-		};
-		D83BBDBF1BE6FABE00603000 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D83BBDAA1BE6FABD00603000 /* CrazyBounce-OS */;
-			targetProxy = D83BBDBE1BE6FABE00603000 /* PBXContainerItemProxy */;
-		};
-		D83BBDCA1BE6FABE00603000 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D83BBDAA1BE6FABD00603000 /* CrazyBounce-OS */;
-			targetProxy = D83BBDC91BE6FABE00603000 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7359E1191A3437F700C5D6C0 /* Main.storyboard */ = {
@@ -576,12 +409,12 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		D83BBDB51BE6FABD00603000 /* MainMenu.xib */ = {
+		D82665561BE7423A0088FDE9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D83BBDB61BE6FABD00603000 /* Base */,
+				D82665571BE7423A0088FDE9 /* Base */,
 			);
-			name = MainMenu.xib;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -607,6 +440,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -675,6 +509,7 @@
 				INFOPLIST_FILE = CrazyBounce/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "1-xing.com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -688,153 +523,43 @@
 				INFOPLIST_FILE = CrazyBounce/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "1-xing.com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		7359E1331A3437F700C5D6C0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CrazyBounceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrazyBounce.app/CrazyBounce";
-			};
-			name = Debug;
-		};
-		7359E1341A3437F700C5D6C0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CrazyBounceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrazyBounce.app/CrazyBounce";
-			};
-			name = Release;
-		};
-		D83BBDD01BE6FABE00603000 /* Debug */ = {
+		D83BBE031BE7104800603000 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_TESTABILITY = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "CrazyBounce-OS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OS X/CrazyBounce-OS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.1-xing.CrazyBounce-OS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "嗨球";
 				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		D83BBDD11BE6FABE00603000 /* Release */ = {
+		D83BBE041BE7104800603000 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "CrazyBounce-OS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OS X/CrazyBounce-OS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.1-xing.CrazyBounce-OS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "嗨球";
 				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		D83BBDD31BE6FABE00603000 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_TESTABILITY = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "CrazyBounce-OSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.1-xing.CrazyBounce-OSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrazyBounce-OS.app/Contents/MacOS/CrazyBounce-OS";
-			};
-			name = Debug;
-		};
-		D83BBDD41BE6FABE00603000 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "CrazyBounce-OSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.1-xing.CrazyBounce-OSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrazyBounce-OS.app/Contents/MacOS/CrazyBounce-OS";
-			};
-			name = Release;
-		};
-		D83BBDD61BE6FABE00603000 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_TESTABILITY = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "CrazyBounce-OSUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.1-xing.CrazyBounce-OSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				TEST_TARGET_NAME = "CrazyBounce-OS";
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		D83BBDD71BE6FABE00603000 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "CrazyBounce-OSUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.1-xing.CrazyBounce-OSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				TEST_TARGET_NAME = "CrazyBounce-OS";
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -859,38 +584,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7359E1321A3437F700C5D6C0 /* Build configuration list for PBXNativeTarget "CrazyBounceTests" */ = {
+		D83BBE021BE7104800603000 /* Build configuration list for PBXNativeTarget "CrazyBounce-OS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7359E1331A3437F700C5D6C0 /* Debug */,
-				7359E1341A3437F700C5D6C0 /* Release */,
+				D83BBE031BE7104800603000 /* Debug */,
+				D83BBE041BE7104800603000 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		D83BBDCF1BE6FABE00603000 /* Build configuration list for PBXNativeTarget "CrazyBounce-OS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D83BBDD01BE6FABE00603000 /* Debug */,
-				D83BBDD11BE6FABE00603000 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		D83BBDD21BE6FABE00603000 /* Build configuration list for PBXNativeTarget "CrazyBounce-OSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D83BBDD31BE6FABE00603000 /* Debug */,
-				D83BBDD41BE6FABE00603000 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		D83BBDD51BE6FABE00603000 /* Build configuration list for PBXNativeTarget "CrazyBounce-OSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D83BBDD61BE6FABE00603000 /* Debug */,
-				D83BBDD71BE6FABE00603000 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

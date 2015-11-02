@@ -31,12 +31,11 @@ class GameOverViewController: UIViewController, viewPassValueDelegate {
         
         self.view.backgroundColor = UIColor(red: 16/255, green: 169/255, blue: 240/255, alpha: 1)
         img_HighScore.hidden = true
-        
         lbl_Catalog.text = Tips[Int(UInt(arc4random()%33))]
     }
     
     func passValue(currentTime: String, bestTime: String, gamemode: GameMode, best: Bool) {
-        println("currentTime: \(currentTime), bestTime: \(bestTime)")
+        print("currentTime: \(currentTime), bestTime: \(bestTime)")
         lbl_CurrentTime.text = currentTime
         lbl_BestTime.text = bestTime
         if best {

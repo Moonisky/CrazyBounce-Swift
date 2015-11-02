@@ -12,8 +12,8 @@ import SpriteKit
 extension SKNode {
     class func unarchiveFromFile(file : String) -> SKNode? {
         if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
-            var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil)!
-            var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
+            let sceneData = try! NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
+            let archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
             
             archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
             let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
@@ -39,18 +39,19 @@ class GameViewController: UIViewController, waterViewDelegate {
     
     /// 游戏场景
     private var gameScene: GameScene!
-    /// 水波界面
-    var waterWaveView: waterView!
     /// 页面传值委托，用以和游戏结束界面传值
     private var delegate: viewPassValueDelegate!
     /// 判断游戏是否结束，结束为True
     private var gameIsOver = false
-    /// 判断当前成绩是否是最佳成绩
-    var isBest = false
     /// 当前游戏模式
     private var gamemode = GameMode.Normal
     /// 波浪高度
     private var waveHeight: CGFloat = 120 / 568
+    
+    /// 水波界面
+    var waterWaveView: waterView!
+    /// 判断当前成绩是否是最佳成绩
+    var isBest = false
     
     // MARK: Layout
     
@@ -65,8 +66,6 @@ class GameViewController: UIViewController, waterViewDelegate {
             gameScene = GameScene(size: skView.bounds.size)
             gameScene.scaleMode = .AspectFill
             gameScene.gameViewController = self
-            gameScene.saveCurrentTime = lbl_currentTime
-            gameScene.saveBestTime = lbl_bestTime
             gameScene.gamemode = gamemode
             skView.presentScene(gameScene)
         
@@ -87,7 +86,7 @@ class GameViewController: UIViewController, waterViewDelegate {
         super.viewWillAppear(animated)
         gameIsOver = false
         lbl_GameMode.hidden = false
-        let modeNumber = arc4random()%3 + 1
+        let modeNumber = arc4random_uniform(3)
         switch modeNumber {
         case 1:
             gamemode = .Classic
@@ -108,7 +107,8 @@ class GameViewController: UIViewController, waterViewDelegate {
     
     func checkWaterDropOver(dropOver: Bool) {
         if dropOver{
-            println("water drop down over")
+            print("water drop down over")
+            gameScene.labelSetting = (lbl_currentTime.font.pointSize, lbl_currentTime.center, lbl_bestTime.font.pointSize, lbl_bestTime.center)
             gameScene.startGame()
             gameScene.waveHeight = waveHeight
             lbl_GameMode.hidden = true
@@ -118,7 +118,7 @@ class GameViewController: UIViewController, waterViewDelegate {
     
     func checkWaterRiseOver(riseOver: Bool) {
         if riseOver{
-            println("water rise up over")
+            print("water rise up over")
             gameOver()
         }
     }
@@ -126,10 +126,10 @@ class GameViewController: UIViewController, waterViewDelegate {
     // MARK: 游戏结束
     
     private func gameOver(){
-        var gameOverViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("gameOverView")! as! UIViewController
+        guard let gameOverViewController = self.storyboard?.instantiateViewControllerWithIdentifier("gameOverView") else { return }
         delegate = gameOverViewController as! GameOverViewController
         self.presentViewController(gameOverViewController, animated: false, completion: nil)
-        delegate!.passValue(gameScene.lbl_currentTime.text, bestTime: gameScene.lbl_bestTime.text, gamemode: gamemode, best: self.isBest)
+        delegate!.passValue(gameScene.nowTime.timeTransformToString(), bestTime: gameScene.bestTime.timeTransformToString(), gamemode: gamemode, best: self.isBest)
         gameIsOver = true
     }
     
@@ -138,11 +138,11 @@ class GameViewController: UIViewController, waterViewDelegate {
         return true
     }
 
-    override func supportedInterfaceOrientations() -> Int {
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
+            return UIInterfaceOrientationMask.AllButUpsideDown
         } else {
-            return Int(UIInterfaceOrientationMask.All.rawValue)
+            return UIInterfaceOrientationMask.All
         }
     }
 

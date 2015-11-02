@@ -24,6 +24,13 @@
 		73D4A8981A518FE700D3A39C /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4A8971A518FE700D3A39C /* GameOverViewController.swift */; };
 		73D4A89C1A51AEF400D3A39C /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4A89B1A51AEF400D3A39C /* FileManager.swift */; };
 		73EEE96A1A35A6D100CA34B1 /* NodeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EEE9691A35A6D100CA34B1 /* NodeCategory.swift */; };
+		D83BBDAE1BE6FABD00603000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BBDAD1BE6FABD00603000 /* AppDelegate.swift */; };
+		D83BBDB01BE6FABD00603000 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BBDAF1BE6FABD00603000 /* GameScene.swift */; };
+		D83BBDB21BE6FABD00603000 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D83BBDB11BE6FABD00603000 /* GameScene.sks */; };
+		D83BBDB41BE6FABD00603000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D83BBDB31BE6FABD00603000 /* Assets.xcassets */; };
+		D83BBDB71BE6FABD00603000 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D83BBDB51BE6FABD00603000 /* MainMenu.xib */; };
+		D83BBDC21BE6FABE00603000 /* CrazyBounce_OSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BBDC11BE6FABE00603000 /* CrazyBounce_OSTests.swift */; };
+		D83BBDCD1BE6FABE00603000 /* CrazyBounce_OSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83BBDCC1BE6FABE00603000 /* CrazyBounce_OSUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +40,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7359E10B1A3437F700C5D6C0;
 			remoteInfo = CrazyBounce;
+		};
+		D83BBDBE1BE6FABE00603000 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7359E1041A3437F700C5D6C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D83BBDAA1BE6FABD00603000;
+			remoteInfo = "CrazyBounce-OS";
+		};
+		D83BBDC91BE6FABE00603000 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7359E1041A3437F700C5D6C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D83BBDAA1BE6FABD00603000;
+			remoteInfo = "CrazyBounce-OS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -58,6 +79,19 @@
 		73D4A8971A518FE700D3A39C /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		73D4A89B1A51AEF400D3A39C /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		73EEE9691A35A6D100CA34B1 /* NodeCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeCategory.swift; sourceTree = "<group>"; };
+		D83BBDAB1BE6FABD00603000 /* CrazyBounce-OS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrazyBounce-OS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D83BBDAD1BE6FABD00603000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D83BBDAF1BE6FABD00603000 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		D83BBDB11BE6FABD00603000 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		D83BBDB31BE6FABD00603000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D83BBDB61BE6FABD00603000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D83BBDB81BE6FABD00603000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D83BBDBD1BE6FABE00603000 /* CrazyBounce-OSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CrazyBounce-OSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D83BBDC11BE6FABE00603000 /* CrazyBounce_OSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyBounce_OSTests.swift; sourceTree = "<group>"; };
+		D83BBDC31BE6FABE00603000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D83BBDC81BE6FABE00603000 /* CrazyBounce-OSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CrazyBounce-OSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D83BBDCC1BE6FABE00603000 /* CrazyBounce_OSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyBounce_OSUITests.swift; sourceTree = "<group>"; };
+		D83BBDCE1BE6FABE00603000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +103,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7359E1221A3437F700C5D6C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83BBDA81BE6FABD00603000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83BBDBA1BE6FABE00603000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83BBDC51BE6FABE00603000 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,8 +147,8 @@
 		7359E1031A3437F700C5D6C0 = {
 			isa = PBXGroup;
 			children = (
-				7359E10E1A3437F700C5D6C0 /* CrazyBounce */,
-				7359E1281A3437F700C5D6C0 /* CrazyBounceTests */,
+				D83BBDA51BE6FA7300603000 /* iOS */,
+				D83BBDA61BE6FA9500603000 /* OS X */,
 				7359E10D1A3437F700C5D6C0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +158,9 @@
 			children = (
 				7359E10C1A3437F700C5D6C0 /* CrazyBounce.app */,
 				7359E1251A3437F700C5D6C0 /* CrazyBounceTests.xctest */,
+				D83BBDAB1BE6FABD00603000 /* CrazyBounce-OS.app */,
+				D83BBDBD1BE6FABE00603000 /* CrazyBounce-OSTests.xctest */,
+				D83BBDC81BE6FABE00603000 /* CrazyBounce-OSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,6 +251,59 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		D83BBDA51BE6FA7300603000 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7359E10E1A3437F700C5D6C0 /* CrazyBounce */,
+				7359E1281A3437F700C5D6C0 /* CrazyBounceTests */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D83BBDA61BE6FA9500603000 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				D83BBDAC1BE6FABD00603000 /* CrazyBounce-OS */,
+				D83BBDC01BE6FABE00603000 /* CrazyBounce-OSTests */,
+				D83BBDCB1BE6FABE00603000 /* CrazyBounce-OSUITests */,
+			);
+			path = "OS X";
+			sourceTree = "<group>";
+		};
+		D83BBDAC1BE6FABD00603000 /* CrazyBounce-OS */ = {
+			isa = PBXGroup;
+			children = (
+				D83BBDAD1BE6FABD00603000 /* AppDelegate.swift */,
+				D83BBDAF1BE6FABD00603000 /* GameScene.swift */,
+				D83BBDB11BE6FABD00603000 /* GameScene.sks */,
+				D83BBDB31BE6FABD00603000 /* Assets.xcassets */,
+				D83BBDB51BE6FABD00603000 /* MainMenu.xib */,
+				D83BBDB81BE6FABD00603000 /* Info.plist */,
+			);
+			name = "CrazyBounce-OS";
+			path = "../CrazyBounce-OS";
+			sourceTree = "<group>";
+		};
+		D83BBDC01BE6FABE00603000 /* CrazyBounce-OSTests */ = {
+			isa = PBXGroup;
+			children = (
+				D83BBDC11BE6FABE00603000 /* CrazyBounce_OSTests.swift */,
+				D83BBDC31BE6FABE00603000 /* Info.plist */,
+			);
+			name = "CrazyBounce-OSTests";
+			path = "../CrazyBounce-OSTests";
+			sourceTree = "<group>";
+		};
+		D83BBDCB1BE6FABE00603000 /* CrazyBounce-OSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D83BBDCC1BE6FABE00603000 /* CrazyBounce_OSUITests.swift */,
+				D83BBDCE1BE6FABE00603000 /* Info.plist */,
+			);
+			name = "CrazyBounce-OSUITests";
+			path = "../CrazyBounce-OSUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -231,12 +342,67 @@
 			productReference = 7359E1251A3437F700C5D6C0 /* CrazyBounceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D83BBDAA1BE6FABD00603000 /* CrazyBounce-OS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D83BBDCF1BE6FABE00603000 /* Build configuration list for PBXNativeTarget "CrazyBounce-OS" */;
+			buildPhases = (
+				D83BBDA71BE6FABD00603000 /* Sources */,
+				D83BBDA81BE6FABD00603000 /* Frameworks */,
+				D83BBDA91BE6FABD00603000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CrazyBounce-OS";
+			productName = "CrazyBounce-OS";
+			productReference = D83BBDAB1BE6FABD00603000 /* CrazyBounce-OS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D83BBDBC1BE6FABE00603000 /* CrazyBounce-OSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D83BBDD21BE6FABE00603000 /* Build configuration list for PBXNativeTarget "CrazyBounce-OSTests" */;
+			buildPhases = (
+				D83BBDB91BE6FABE00603000 /* Sources */,
+				D83BBDBA1BE6FABE00603000 /* Frameworks */,
+				D83BBDBB1BE6FABE00603000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D83BBDBF1BE6FABE00603000 /* PBXTargetDependency */,
+			);
+			name = "CrazyBounce-OSTests";
+			productName = "CrazyBounce-OSTests";
+			productReference = D83BBDBD1BE6FABE00603000 /* CrazyBounce-OSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D83BBDC71BE6FABE00603000 /* CrazyBounce-OSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D83BBDD51BE6FABE00603000 /* Build configuration list for PBXNativeTarget "CrazyBounce-OSUITests" */;
+			buildPhases = (
+				D83BBDC41BE6FABE00603000 /* Sources */,
+				D83BBDC51BE6FABE00603000 /* Frameworks */,
+				D83BBDC61BE6FABE00603000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D83BBDCA1BE6FABE00603000 /* PBXTargetDependency */,
+			);
+			name = "CrazyBounce-OSUITests";
+			productName = "CrazyBounce-OSUITests";
+			productReference = D83BBDC81BE6FABE00603000 /* CrazyBounce-OSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		7359E1041A3437F700C5D6C0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "益行人-星夜暮晨";
 				TargetAttributes = {
@@ -247,6 +413,17 @@
 					7359E1241A3437F700C5D6C0 = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 7359E10B1A3437F700C5D6C0;
+					};
+					D83BBDAA1BE6FABD00603000 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					D83BBDBC1BE6FABE00603000 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = D83BBDAA1BE6FABD00603000;
+					};
+					D83BBDC71BE6FABE00603000 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = D83BBDAA1BE6FABD00603000;
 					};
 				};
 			};
@@ -265,6 +442,9 @@
 			targets = (
 				7359E10B1A3437F700C5D6C0 /* CrazyBounce */,
 				7359E1241A3437F700C5D6C0 /* CrazyBounceTests */,
+				D83BBDAA1BE6FABD00603000 /* CrazyBounce-OS */,
+				D83BBDBC1BE6FABE00603000 /* CrazyBounce-OSTests */,
+				D83BBDC71BE6FABE00603000 /* CrazyBounce-OSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,6 +460,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7359E1231A3437F700C5D6C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83BBDA91BE6FABD00603000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83BBDB41BE6FABD00603000 /* Assets.xcassets in Resources */,
+				D83BBDB21BE6FABD00603000 /* GameScene.sks in Resources */,
+				D83BBDB71BE6FABD00603000 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83BBDBB1BE6FABE00603000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83BBDC61BE6FABE00603000 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,6 +522,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D83BBDA71BE6FABD00603000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83BBDB01BE6FABD00603000 /* GameScene.swift in Sources */,
+				D83BBDAE1BE6FABD00603000 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83BBDB91BE6FABE00603000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83BBDC21BE6FABE00603000 /* CrazyBounce_OSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83BBDC41BE6FABE00603000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83BBDCD1BE6FABE00603000 /* CrazyBounce_OSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -325,6 +554,16 @@
 			isa = PBXTargetDependency;
 			target = 7359E10B1A3437F700C5D6C0 /* CrazyBounce */;
 			targetProxy = 7359E1261A3437F700C5D6C0 /* PBXContainerItemProxy */;
+		};
+		D83BBDBF1BE6FABE00603000 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D83BBDAA1BE6FABD00603000 /* CrazyBounce-OS */;
+			targetProxy = D83BBDBE1BE6FABE00603000 /* PBXContainerItemProxy */;
+		};
+		D83BBDCA1BE6FABE00603000 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D83BBDAA1BE6FABD00603000 /* CrazyBounce-OS */;
+			targetProxy = D83BBDC91BE6FABE00603000 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -335,6 +574,14 @@
 				7359E11A1A3437F700C5D6C0 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D83BBDB51BE6FABD00603000 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D83BBDB61BE6FABD00603000 /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -479,6 +726,118 @@
 			};
 			name = Release;
 		};
+		D83BBDD01BE6FABE00603000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "CrazyBounce-OS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.1-xing.CrazyBounce-OS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D83BBDD11BE6FABE00603000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "CrazyBounce-OS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.1-xing.CrazyBounce-OS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D83BBDD31BE6FABE00603000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "CrazyBounce-OSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.1-xing.CrazyBounce-OSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrazyBounce-OS.app/Contents/MacOS/CrazyBounce-OS";
+			};
+			name = Debug;
+		};
+		D83BBDD41BE6FABE00603000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "CrazyBounce-OSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.1-xing.CrazyBounce-OSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrazyBounce-OS.app/Contents/MacOS/CrazyBounce-OS";
+			};
+			name = Release;
+		};
+		D83BBDD61BE6FABE00603000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "CrazyBounce-OSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.1-xing.CrazyBounce-OSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = "CrazyBounce-OS";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D83BBDD71BE6FABE00603000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "CrazyBounce-OSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.1-xing.CrazyBounce-OSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = "CrazyBounce-OS";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -508,6 +867,30 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D83BBDCF1BE6FABE00603000 /* Build configuration list for PBXNativeTarget "CrazyBounce-OS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D83BBDD01BE6FABE00603000 /* Debug */,
+				D83BBDD11BE6FABE00603000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D83BBDD21BE6FABE00603000 /* Build configuration list for PBXNativeTarget "CrazyBounce-OSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D83BBDD31BE6FABE00603000 /* Debug */,
+				D83BBDD41BE6FABE00603000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D83BBDD51BE6FABE00603000 /* Build configuration list for PBXNativeTarget "CrazyBounce-OSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D83BBDD61BE6FABE00603000 /* Debug */,
+				D83BBDD71BE6FABE00603000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

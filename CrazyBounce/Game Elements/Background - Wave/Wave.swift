@@ -55,12 +55,12 @@ class waterView: UIView, waterViewDelegate {
         waveTimer = NSTimer.scheduledTimerWithTimeInterval(0.02, target: self, selector: "waveAnimation", userInfo: nil, repeats: true)
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // 波浪属性设置
-    func changeWave(#waveHeight: Float, waveSpeed: Float){
+    func changeWave(waveHeight waveHeight: Float, waveSpeed: Float){
         peakHeightChange = waveHeight
         waveSpeedChange = waveSpeed
     }
@@ -122,8 +122,8 @@ class waterView: UIView, waterViewDelegate {
     }
     
     override func drawRect(rect: CGRect) {
-        var context = UIGraphicsGetCurrentContext()
-        var path = CGPathCreateMutable()
+        let context = UIGraphicsGetCurrentContext()
+        let path = CGPathCreateMutable()
         
         // 绘制水波
         CGContextSetLineWidth(context, 1)
@@ -132,11 +132,11 @@ class waterView: UIView, waterViewDelegate {
         CGPathMoveToPoint(path, nil, 0, lineY)
         
         for var lineX: CGFloat = 0; lineX <= self.frame.size.width; lineX++ {
-            var p1: CGFloat = CGFloat(peakHeight)
-            var p21: CGFloat = lineX / CGFloat(180) * CGFloat(M_PI)
-            var p22: CGFloat = CGFloat(4 * waveSpeed) / CGFloat(M_PI)
-            var p2: CGFloat = sin(p21 + p22)
-            var p3: CGFloat = CGFloat(5)
+            let p1: CGFloat = CGFloat(peakHeight)
+            let p21: CGFloat = lineX / CGFloat(180) * CGFloat(M_PI)
+            let p22: CGFloat = CGFloat(4 * waveSpeed) / CGFloat(M_PI)
+            let p2: CGFloat = sin(p21 + p22)
+            let p3: CGFloat = CGFloat(5)
             lineY = p1 * p2 * p3 + currentLinePointY
             CGPathAddLineToPoint(path, nil, lineX, lineY)
         }
@@ -147,6 +147,6 @@ class waterView: UIView, waterViewDelegate {
         
         CGContextAddPath(context, path)
         CGContextFillPath(context)
-        CGContextDrawPath(context, kCGPathStroke)
+        CGContextDrawPath(context, CGPathDrawingMode.Stroke)
     }
 }

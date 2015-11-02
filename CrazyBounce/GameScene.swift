@@ -8,40 +8,61 @@
 
 import SpriteKit
 
+/// 游戏模式
 enum GameMode: String {
-    case Normal = "普通模式"             // 普通模式
-    case Classic = "经典模式"              // 经典模式，小球不会消
-    case Items = "道具模式"               // 道具模式，继承自普通模式
+    /// 普通模式
+    case Normal = "普通模式"
+    /// 经典模式
+    case Classic = "经典模式"
+    /// 道具模式
+    case Items = "道具模式"
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    let speedRotate: CGFloat = 4 / 768          // 速度比例，用以适配各设备上的速度
+    // MARK: 属性
     
-    var bar: Bar!
-    var gameStart: Bool = false                      // 检测游戏是否开始
-    var waveHeight: CGFloat = 0
-    
-    var lastBallInterval: NSTimeInterval = 0            // 最近小球出现的时间
-    var lastUpdateInterval: NSTimeInterval = 0       //  上次更新时间
-    var lastItemsInterval: NSTimeInterval = 0       //最近道具小球出现的时间
-    var ItemsAppearRandomTime = arc4random()%9              // 道具小球随机出现时间
-    var ItemsAppearTimePart = 0                     // 道具小球出现时间段
-    var nowTime = 0                                     // 当前游戏时间
-    var bestTime = 0                                        // 最佳游戏时间
-    var gamemode:GameMode!
-    
-    var saveCurrentTime: UILabel!
-    var saveBestTime: UILabel!
-    var lbl_currentTime: SKLabelNode!
-    var lbl_bestTime: SKLabelNode!
-    
-    var fileManager = FileManager()
-    var gameViewController: GameViewController!
-    
-    override init() {
-        super.init()
+    /// 速度比例，用以适配各设备上的初始速度
+    private let speedRotate: CGFloat = 4 / 768
+    /// 最近小球出现的时间，这个时间用以决定是否添加新的小球，以秒为单位
+    private var lastBallInterval: NSTimeInterval = 0
+    /// 上次游戏刷新的时间，以秒为单位
+    private var lastUpdateInterval: NSTimeInterval = 0
+    /// 最近道具小球出现的时间，以秒为单位
+    private var lastItemsInterval: NSTimeInterval = 0
+    /// 道具小球随机出现的时间，以秒为单位
+    private var ItemsAppearRandomTime: NSTimeInterval {
+        return NSTimeInterval(arc4random()%9)
     }
+    /// 道具小球出现时间段，以秒为单位
+    private var ItemsAppearTimePart = 0
+    /// 检测游戏是否已经开始，如果游戏已经开始，那么此属性将为 true
+    private var gameStart: Bool = false
+    
+    /// 滑块
+    private var bar: Bar!
+    /// Sprite 标签节点，用以记录当前时间
+    private var lbl_currentTime: SKLabelNode!
+    /// Sprite 标签节点，用以记录最佳时间
+    private var lbl_bestTime: SKLabelNode!
+    /// 文件管理器
+    private var fileManager = FileManager()
+    
+    /// 当前游戏时间，以毫秒为单位
+    var nowTime = 0
+    /// 最佳游戏时间，以毫秒为单位
+    var bestTime = 0
+
+    /// 设定的当前波浪高度
+    var waveHeight: CGFloat = 0
+    /// 当前游戏模式
+    var gamemode:GameMode!
+    /// 传递进来的标签设置，分别是当前时间文本大小，当前时间位置，最佳时间文本大小，最佳时间位置
+    var labelSetting: (currentSize: CGFloat, currentCenter: CGPoint, bestSize: CGFloat, bestCenter: CGPoint)!
+    /// 关联的视图控制器
+    weak var gameViewController: GameViewController!
+    
+    // MARK: 初始化
     
     override init(size: CGSize) {
         super.init(size: size)
@@ -55,22 +76,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         
         // 添加水底
-        var waterRect = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 1)
-        var water = SKNode()
+        let waterRect = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 1)
+        let water = SKNode()
         water.physicsBody = SKPhysicsBody(edgeLoopFromRect: waterRect)
         self.addChild(water)
         water.physicsBody?.categoryBitMask = waterCategory
     }
     
-// ------游戏配置---------------------------------------------------------------------------------------------
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
-    // 游戏启动
-    func startGame(){
+    // MARK: 游戏配置
+    
+    /// 启动游戏
+    func startGame() {
         gameStart = true
-        println("start game")
+        print("游戏开始")
         initLabel()
         fileManager.loadFile()
-        switch gamemode! {
+        
+        // 添加 Bar
+        bar = Bar(imageName: "BarImage")
+        bar.position = CGPointMake(self.frame.width / 2, self.frame.height / 2)
+        bar.setPhysicsBody()
+        self.addChild(bar)
+        
+        guard let gamemode = gamemode else { print("游戏启动失败");return }
+        switch gamemode {
         case .Classic :
             startGameModeClassic()
         case .Normal:
@@ -78,66 +111,46 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         case .Items:
             startGameModeItems()
         }
+        addClassicBall()
     }
     
-    // 启动经典模式
-    func startGameModeClassic(){
-        println("start classic game mode")
-        // 添加 Bar
-        bar = Bar(imageName: "BarImage")
-        bar.position = CGPointMake(self.frame.width / 2, self.frame.height / 2)
-        self.addChild(bar)
-        bar.setPhysicsBody()
+    /// 启动经典模式
+    private func startGameModeClassic() {
+        print("start classic game mode")
         bestTime = fileManager.bestTimeClassic
-        lbl_bestTime.text = "Classic Best:\(timeTransform(bestTime))"
-        gamemode = GameMode.Classic
-        addClassicBall()
+        lbl_bestTime.text = "Classic Best:\(bestTime.timeTransformToString())"
     }
     
-    // 启动普通模式
-    func startGameModeNormal(){
-        println("start normal game mode")
-        // 添加Bar
-        bar = Bar(imageName: "BarImage")
-        bar.position = CGPointMake(self.frame.width / 2, self.frame.height / 2)
-        self.addChild(bar)
-        bar.setPhysicsBody()
+    /// 启动普通模式
+    private func startGameModeNormal() {
+        print("start normal game mode")
         bestTime = fileManager.bestTimeNormal
-        lbl_bestTime.text = "Normal Best:\(timeTransform(bestTime))"
-        gamemode = GameMode.Normal
-        addClassicBall()
+        lbl_bestTime.text = "Normal Best:\(bestTime.timeTransformToString())"
     }
     
-    // 启动道具模式
-    func startGameModeItems(){
-        println("start items game mode")
-        // 添加Bar
-        bar = Bar(imageName: "BarImage")
-        bar.position = CGPointMake(self.frame.width / 2, self.frame.height / 2)
-        self.addChild(bar)
-        bar.setPhysicsBody()
+    /// 启动道具模式
+    private func startGameModeItems() {
+        print("start items game mode")
         bestTime = fileManager.bestTimeIdems
-        lbl_bestTime.text = "Items Best:\(timeTransform(bestTime))"
-        gamemode = GameMode.Items
-        addClassicBall()
+        lbl_bestTime.text = "Items Best:\(bestTime.timeTransformToString())"
     }
     
-    // 添加经典小球
-    func addClassicBall(){
-        var initX = UInt32(self.frame.width - 20)
+    /// 添加经典小球
+    private func addClassicBall() {
+        let initX = UInt32(self.frame.width - 20)
         //var initSpeed = speedRotate * self.frame.height * CGFloat(2)
-        var initSpeed: CGFloat = 4
-        var ball: Ball = Ball(center: CGPoint(x: CGFloat(arc4random()%initX+10), y: self.frame.height), speed: initSpeed)
+        let initSpeed: CGFloat = 4
+        let ball: Ball = Ball(center: CGPoint(x: CGFloat(arc4random()%initX+10), y: self.frame.height), speed: initSpeed)
         self.addChild(ball)
         ball.setPhysicsBody()
     }
     
-    // 添加道具小球
-    func addItemsBall(){
-        var random = arc4random()%3
-        var initX = UInt32(self.frame.width - 20)
-        var initSpeed = speedRotate * self.frame.height * CGFloat(2)
-        var ball: Ball
+    /// 添加道具小球
+    private func addItemsBall(){
+        let random = arc4random()%3
+        let initX = UInt32(self.frame.width - 20)
+        let initSpeed = speedRotate * self.frame.height * CGFloat(2)
+        let ball: Ball
         switch random {
         case 0:
             ball = AllCleanBall(center: CGPoint(x: CGFloat(arc4random()%initX+10), y: self.frame.height), speed: initSpeed)
@@ -150,49 +163,45 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.setPhysicsBody()
     }
     
-    // 游戏结束
-    func gameOver(){
+    /// 游戏结束
+    private func gameOver() {
         if gameStart {
             gameStart = false
             checkTheTime()
-            lbl_bestTime.text = "Best:\(timeTransform(bestTime))"
+            lbl_bestTime.text = "Best:\(bestTime.timeTransformToString())"
             gameViewController.waterWaveView.waterRiseUp()
             self.physicsWorld.gravity = CGVectorMake(0, 0)
-            var children = self.children
-            for child in children {
-                var ball = child as? Ball
-                if ball != nil {
-                    ball!.physicsBody?.velocity = CGVectorMake(0, 0)
-                }
+            let children = self.children
+            for child in children where child is Ball {
+                child.physicsBody?.velocity = CGVectorMake(0, 0)
             }
         }
     }
     
-// -------触摸动作-------------------------------------------------------------------------------------
+    // MARK: Touch Action
 
     // 检测触摸动作来移动 Bar
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
         for touch: AnyObject in touches {
             // 获取触摸位置
-            var touchLocation = touch.locationInNode(self)
-            var previousLocation = touch.previousLocationInNode(self)
+            let touchLocation = touch.locationInNode(self)
+            let previousLocation = touch.previousLocationInNode(self)
             // 获取 Bar 结点
-            var barNode = self.childNodeWithName("bar") as? SKSpriteNode
+            guard let barNode = self.childNodeWithName("bar") as? SKSpriteNode where gameStart else { return }
             // 计算 Bar 将要移动的位置
-            if barNode != nil && gameStart{
-                var barNodeX = barNode!.position.x + (touchLocation.x - previousLocation.x)
-                var barNodeY = barNode!.position.y + (touchLocation.y - previousLocation.y)
-                // 限制 Bar 的移动范围
-                barNodeX = max(barNodeX, bar.size.width / 2)
-                barNodeX = min(barNodeX, self.size.width - bar.size.width / 2)
-                barNodeY = min(barNodeY, self.size.height - bar.size.height * 2)
-                barNodeY = max(barNodeY, waveHeight)
-                bar.position = CGPointMake(barNodeX, barNodeY)
-            }
+            var barNodeX = barNode.position.x + (touchLocation.x - previousLocation.x)
+            var barNodeY = barNode.position.y + (touchLocation.y - previousLocation.y)
+            // 限制 Bar 的移动范围
+            barNodeX = max(barNodeX, bar.size.width / 2)
+            barNodeX = min(barNodeX, self.size.width - bar.size.width / 2)
+            barNodeY = min(barNodeY, self.size.height - bar.size.height * 2)
+            barNodeY = max(barNodeY, waveHeight)
+            bar.position = CGPointMake(barNodeX, barNodeY)
         }
     }
     
-//-------碰撞处理--------------------------------------------------------------------------------------
+    // MARK: 碰撞处理
     
     func didBeginContact(contact: SKPhysicsContact) {
         var firstBody = SKPhysicsBody()
@@ -206,15 +215,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             secondBody = contact.bodyA
         }
         // 处理球和水底的碰撞
-        if (firstBody.categoryBitMask == ballCategory || firstBody.categoryBitMask == CleanBallCategory || firstBody.categoryBitMask == LongBallCategory || firstBody.categoryBitMask == SlowBallCategory) && secondBody.categoryBitMask == waterCategory && gameStart{
+        if (firstBody.categoryBitMask == ballCategory || firstBody.categoryBitMask == CleanBallCategory || firstBody.categoryBitMask == LongBallCategory || firstBody.categoryBitMask == SlowBallCategory) && secondBody.categoryBitMask == waterCategory && gameStart {
             gameOver()
             firstBody.node?.removeFromParent()
         }
         // 处理小球和小球之间的碰撞
-        else if firstBody.categoryBitMask == ballCategory && secondBody.categoryBitMask == ballCategory && gameStart{
-            var firstBall = firstBody.node as! Ball
-            var secondBall = secondBody.node as! Ball
-            if gamemode == GameMode.Normal || gamemode == GameMode.Items{
+        else if firstBody.categoryBitMask == ballCategory && secondBody.categoryBitMask == ballCategory && gameStart {
+            guard let firstBall = firstBody.node as? Ball else { return }
+            guard let secondBall = secondBody.node as? Ball else { return }
+            if gamemode == GameMode.Normal || gamemode == GameMode.Items {
                 firstBall.knockTimes++
                 secondBall.knockTimes++
                 if firstBall.knockTimes > 3 {
@@ -227,18 +236,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             firstBall.knockBall()
             secondBall.knockBall()
         }
-            // 碰撞消失小球
+        // 碰撞消失小球
         else if firstBody.categoryBitMask == CleanBallCategory && secondBody.categoryBitMask == ballCategory && gameStart {
-            var cleanball = firstBody.node as! AllCleanBall
-            var ball = secondBody.node as! Ball
+            guard let cleanball = firstBody.node as? AllCleanBall else { return }
+            guard let ball = secondBody.node as? Ball else { return }
             if cleanball.CleanSkill {
                 secondBody.node?.removeFromParent()
             }
             ball.knockBall()
         }
         else if firstBody.categoryBitMask == ballCategory && secondBody.categoryBitMask == CleanBallCategory && gameStart {
-            var cleanball = secondBody.node as! AllCleanBall
-            var ball = firstBody.node as! Ball
+            guard let cleanball = secondBody.node as? AllCleanBall else { return }
+            guard let ball = firstBody.node as? Ball else { return }
             if cleanball.CleanSkill {
                 firstBody.node?.removeFromParent()
             }
@@ -246,16 +255,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         // 处理小球碰撞效果
         else if firstBody.categoryBitMask == ballCategory && gameStart{
-            var ball = firstBody.node as? Ball
-            ball?.knockBall()
+            guard let ball = firstBody.node as? Ball else { return }
+            ball.knockBall()
         }
         else if secondBody.categoryBitMask == ballCategory && gameStart{
-            var ball = secondBody.node as? Ball
-            ball?.knockBall()
+            guard let ball = secondBody.node as? Ball else { return }
+            ball.knockBall()
         }
         // 道具小球处理
         else if firstBody.categoryBitMask == CleanBallCategory && secondBody.categoryBitMask == barCategory && gameStart{
-            var cleanball = firstBody.node as! AllCleanBall
+            guard let cleanball = firstBody.node as? AllCleanBall else { return }
             if !cleanball.CleanSkill {
                 cleanball.CleanSkill = true
             }
@@ -265,18 +274,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             firstBody.node?.removeFromParent()
         }
         else if firstBody.categoryBitMask == SlowBallCategory && secondBody.categoryBitMask == barCategory && gameStart{
-            var children = self.children
-            for child in children {
-                var ball = child as? Ball
-                if ball != nil {
-                    ball!.physicsBody?.velocity = CGVectorMake(ball!.physicsBody!.velocity.dx / 4, 0)
-                }
+            let children = self.children
+            for child in children where child is Ball {
+                child.physicsBody?.velocity = CGVectorMake(child.physicsBody!.velocity.dx / 4, 0)
             }
             firstBody.node?.removeFromParent()
         }
     }
     
-    //---------时间处理----------------
+    // MARK: 时间处理
     
     override func update(currentTime: CFTimeInterval) {
         if gameStart {
@@ -291,25 +297,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             update(timeSinceLastUptade: timeSinceLast)
             
             // 限制小球速度
-            var ball = self.childNodeWithName("ball") as? Ball
-            if ball != nil {
-                ball!.setTheBall()
-                var speed = sqrt(ball!.physicsBody!.velocity.dx * ball!.physicsBody!.velocity.dx + ball!.physicsBody!.velocity.dy * ball!.physicsBody!.velocity.dy)
-                if speed > 600{
-                    println("speed limit mode begin")
-                    ball!.physicsBody?.linearDamping = 0.4
-                }else {
-                    ball!.physicsBody?.linearDamping = 0
-                }
+            guard let ball = self.childNodeWithName("ball") as? Ball else { return }
+            ball.setTheBall()
+            guard let body = ball.physicsBody else { return }
+            let speed = sqrt(body.velocity.dx * body.velocity.dx + body.velocity.dy * body.velocity.dy)
+            if speed > 600{
+                print("speed limit mode begin")
+                body.linearDamping = 0.4
+            }else {
+                body.linearDamping = 0
             }
         }
     }
     
-    // 小球出现时间
-    func update(#timeSinceLastUptade: CFTimeInterval){
+    /// 小球出现时间
+    private func update(timeSinceLastUptade timeSinceLastUptade: CFTimeInterval){
         if gamemode == GameMode.Items {
             self.lastItemsInterval += timeSinceLastUptade
-            if lastItemsInterval > NSTimeInterval(ItemsAppearRandomTime) + NSTimeInterval(ItemsAppearTimePart) {
+            if lastItemsInterval > ItemsAppearRandomTime + NSTimeInterval(ItemsAppearTimePart) {
                 lastItemsInterval = 0
                 ItemsAppearTimePart = 9
                 addItemsBall()
@@ -323,36 +328,56 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    // 当前时间标签变化动画
-    func changeTheLabel(time: Int){
+    // MARK: Helper Method
+    
+    /// 当前时间标签变化动画
+    private func changeTheLabel(time: Int){
         if nowTime > bestTime {
             lbl_bestTime.hidden = true
             lbl_currentTime.runAction(SKAction.scaleTo(2, duration: 1.0))
         }
-        lbl_currentTime.text = timeTransform(time)
+        lbl_currentTime.text = time.timeTransformToString()
     }
     
-    // 比较当前时间和最高时间并存档
-    func checkTheTime(){
+    /// 比较当前时间和最高时间并存档
+    private func checkTheTime(){
         if nowTime > bestTime {
             bestTime = nowTime
             gameViewController.isBest = true
             switch gamemode! {
             case .Classic:
-                fileManager.writeFileOf(Mode: bestTimeMode.Classic, WithTime: bestTime)
+                fileManager.writeFileOfMode(.Classic, WithTime: bestTime)
             case .Normal:
-                fileManager.writeFileOf(Mode: bestTimeMode.Normal, WithTime: bestTime)
+                fileManager.writeFileOfMode(.Normal, WithTime: bestTime)
             case .Items:
-                fileManager.writeFileOf(Mode: bestTimeMode.Items, WithTime: bestTime)
+                fileManager.writeFileOfMode(.Items, WithTime: bestTime)
             }
         }
     }
     
-    // 将时间（毫秒）转换为00:00格式
-    func timeTransform(time: Int) -> String{
+    /// 配置文字
+    private func initLabel(){
+        lbl_currentTime = SKLabelNode(fontNamed: "HelveticaNeue-Thin")
+        lbl_currentTime.hidden = false
+        lbl_currentTime.fontSize = labelSetting.0
+        lbl_currentTime.position = CGPointMake(labelSetting.1.x, self.frame.height - labelSetting.1.y)
+        lbl_currentTime.text = "00\"00"
+        lbl_bestTime = SKLabelNode(fontNamed: "HelveticaNeue-Thin")
+        lbl_bestTime.hidden = false
+        lbl_bestTime.fontSize = labelSetting.2
+        lbl_bestTime.position = CGPointMake(labelSetting.3.x, self.frame.height - labelSetting.3.y)
+        lbl_bestTime.text = "Best:00\"00"
+        self.addChild(lbl_currentTime)
+        self.addChild(lbl_bestTime)
+    }
+}
+
+extension Int {
+    /// 将时间（毫秒）转换为00:00格式
+    func timeTransformToString() -> String{
         var str = ""
-        var second:Int = time / 60
-        var midSecond:Int = time % 60
+        let second:Int = self / 60
+        let midSecond:Int = self % 60
         if second < 10 {
             str = "0" + String(second) + "\""
         }
@@ -366,25 +391,5 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             str += String(midSecond)
         }
         return str
-    }
-    
-    // 配置文字
-    func initLabel(){
-        lbl_currentTime = SKLabelNode(fontNamed: "HelveticaNeue-Thin")
-        lbl_currentTime.hidden = false
-        lbl_currentTime.fontSize = saveCurrentTime.font.pointSize
-        lbl_currentTime.position = CGPointMake(saveCurrentTime.center.x, self.frame.height - saveCurrentTime.center.y)
-        lbl_currentTime.text = "00\"00"
-        lbl_bestTime = SKLabelNode(fontNamed: "HelveticaNeue-Thin")
-        lbl_bestTime.hidden = false
-        lbl_bestTime.fontSize = saveBestTime.font.pointSize
-        lbl_bestTime.position = CGPointMake(saveBestTime.center.x, self.frame.height - saveBestTime.center.y)
-        lbl_bestTime.text = "Best:00\"00"
-        self.addChild(lbl_currentTime)
-        self.addChild(lbl_bestTime)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

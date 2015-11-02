@@ -8,35 +8,41 @@
 
 import UIKit
 
-enum bestTimeMode {
-    case Classic
-    case Normal
-    case Items
-}
-
-class FileManager{
+/// 文件管理器
+class FileManager {
+    
+    // MARK: 属性
+    
+    /// 经典模式最佳时间
     var bestTimeClassic = 0
+    /// 正常模式最佳时间
     var bestTimeNormal = 0
+    /// 道具模式最佳时间
     var bestTimeIdems = 0
     
-    var filename:String!
+    /// 当前文件名称
+    private var filename:String!
     
-    init(){
-        filename = filePath("time.plist") as String
+    // MARK: 初始化
+    
+    init() {
+        filename = getFilePathWithFileName("time.plist")
     }
     
-    func loadFile(){
+    // MARK: 读写方法
+    
+    func loadFile() {
         if NSFileManager.defaultManager().fileExistsAtPath(filename) {
-            var data = NSArray(contentsOfFile: filename)!
+            guard let data = NSArray(contentsOfFile: filename) else { return }
             bestTimeClassic = data.objectAtIndex(0) as! Int
             bestTimeNormal = data.objectAtIndex(1) as! Int
             bestTimeIdems = data.objectAtIndex(2) as! Int
         }
-        println("file load over, the data is Classic:\(bestTimeClassic), Normal: \(bestTimeNormal), Items: \(bestTimeIdems)")
+        print("file load over, the data is Classic:\(bestTimeClassic), Normal: \(bestTimeNormal), Items: \(bestTimeIdems)")
     }
     
-    func writeFileOf(#Mode: bestTimeMode, WithTime time: Int){
-        var data = NSMutableArray()
+    func writeFileOfMode(Mode: GameMode, WithTime time: Int){
+        let data = NSMutableArray()
         switch Mode {
         case .Classic:
             bestTimeClassic = time
@@ -51,12 +57,10 @@ class FileManager{
         data.writeToFile(filename, atomically: true)
     }
     
-    //文件路径函数
-    private func filePath(fileName: NSString) -> NSString {
-        var path:NSArray = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
-        var docPath:NSString = path.objectAtIndex(0) as! NSString
-        var filePath = docPath.stringByAppendingPathComponent(fileName as String)
-        return filePath
+    /// 文件路径函数
+    private func getFilePathWithFileName(filename: String) -> String {
+        let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+        guard let fileURL = NSURL(string: path) else { return path }
+        return fileURL.URLByAppendingPathComponent(filename).absoluteString
     }
-    
 }

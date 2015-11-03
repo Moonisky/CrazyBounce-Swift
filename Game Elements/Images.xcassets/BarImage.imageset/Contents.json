@@ -26,12 +26,12 @@
     },
     {
       "idiom" : "mac",
-      "filename" : "Bar_iPad-1.png",
+      "filename" : "Bar_96x22.png",
       "scale" : "1x"
     },
     {
       "idiom" : "mac",
-      "filename" : "Bar_iPad_2x-1.png",
+      "filename" : "Bar_192x44.png",
       "scale" : "2x"
     }
   ],

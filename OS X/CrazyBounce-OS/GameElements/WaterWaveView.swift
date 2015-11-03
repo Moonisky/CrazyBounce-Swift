@@ -157,8 +157,12 @@ class WaterWaveView: NSView {
             }
         }
         if currentProgress > 0.8 {
+            currentProgress = 0.8
+            progress = 0.8
             delegate?.checkWaterDropOver!()
-        } else if currentProgress < 0 {
+        } else if currentProgress < -0.1 {
+            currentProgress = -0.1
+            progress = -0.1
             delegate?.checkWaterRiseOver!()
         }
         

@@ -208,15 +208,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     #elseif os(OSX)
-    override func mouseMoved(theEvent: NSEvent) {
+    override func mouseDragged(theEvent: NSEvent) {
         // 获取鼠标点击位置
         let location = theEvent.locationInNode(self)
-        let previousLocation = location
-        // 获取 Bar 结点
-        guard let barNode = self.childNodeWithName("bar") as? SKSpriteNode where gameStart else { return }
         // 计算 Bar 将要移动的位置
-        var barNodeX = barNode.position.x + (location.x - previousLocation.x)
-        var barNodeY = barNode.position.y + (location.y - previousLocation.y)
+        var barNodeX =  location.x
+        var barNodeY =  location.y
         // 限制 Bar 的移动范围
         barNodeX = max(barNodeX, bar.size.width / 2)
         barNodeX = min(barNodeX, self.size.width - bar.size.width / 2)
@@ -263,11 +260,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         // 碰撞消失小球
         else if firstBody.categoryBitMask == CleanBallCategory && secondBody.categoryBitMask == ballCategory && gameStart {
-            guard let ball = secondBody.node as? Ball else { return }
+            guard let ball = secondBody.node as? NormalBall else { return }
             ball.knockBall()
         }
         else if firstBody.categoryBitMask == ballCategory && secondBody.categoryBitMask == CleanBallCategory && gameStart {
-            guard let ball = firstBody.node as? Ball else { return }
+            guard let ball = firstBody.node as? NormalBall else { return }
             ball.knockBall()
         }
         // 处理小球碰撞效果

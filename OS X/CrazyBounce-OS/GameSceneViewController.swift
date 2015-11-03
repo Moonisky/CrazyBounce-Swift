@@ -64,6 +64,7 @@ class GameSceneViewController: NSViewController, WaterWaveDelegate {
         gameView.hidden = false
         // 启动游戏界面
         currentState = .Gaming
+        gameScene.addWater()
         // 设定模式显示标签
         lblGamemode.hidden = false
         self.view.sortSubviewsUsingFunction(siblingViewWithComparator, context: nil)

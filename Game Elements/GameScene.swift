@@ -69,12 +69,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsBody?.angularDamping = 0  // 取消空气阻力
         self.physicsWorld.contactDelegate = self
         
-        // 添加水底
-        let waterRect = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 1)
-        let water = SKNode()
-        water.physicsBody = SKPhysicsBody(edgeLoopFromRect: waterRect)
-        self.addChild(water)
-        water.physicsBody?.categoryBitMask = waterCategory
+        addWater()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -82,6 +77,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     // MARK: 游戏配置
+    
+    /// 添加水底
+    func addWater() {
+        // 添加水底
+        let waterRect = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 1)
+        let water = SKNode()
+        water.physicsBody = SKPhysicsBody(edgeLoopFromRect: waterRect)
+        self.addChild(water)
+        water.physicsBody?.categoryBitMask = waterCategory
+    }
     
     /// 启动游戏
     func startGame() {
@@ -111,21 +116,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     /// 启动经典模式
     private func startGameModeClassic() {
         print("start classic game mode")
-        bestTime = fileManager.bestTimeClassic
+        if let bestTime = fileManager.bestTimeClassic.values.sort().first {
+            self.bestTime = bestTime
+        }
         lbl_bestTime.text = "Classic Best:\(bestTime.timeTransformToString())"
     }
     
     /// 启动普通模式
     private func startGameModeNormal() {
         print("start normal game mode")
-        bestTime = fileManager.bestTimeNormal
+        if let bestTime = fileManager.bestTimeNormal.values.sort().first {
+            self.bestTime = bestTime
+        }
         lbl_bestTime.text = "Normal Best:\(bestTime.timeTransformToString())"
     }
     
     /// 启动道具模式
     private func startGameModeItems() {
         print("start items game mode")
-        bestTime = fileManager.bestTimeIdems
+        if let bestTime = fileManager.bestTimeIdems.values.sort().first {
+            self.bestTime = bestTime
+        }
         lbl_bestTime.text = "Items Best:\(bestTime.timeTransformToString())"
     }
     

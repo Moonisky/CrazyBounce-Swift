@@ -55,9 +55,10 @@
                                         <menuItem title="开始游戏" keyEquivalent="s" id="Was-JA-tGl"/>
                                         <menuItem title="重启游戏" keyEquivalent="r" id="IAo-SY-fd9"/>
                                         <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
-                                        <menuItem title="查看分数" keyEquivalent="c" id="qIS-W8-SiK"/>
-                                        <menuItem title="分享" keyEquivalent="s" id="aTl-1u-JFS">
-                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                        <menuItem title="查看分数" keyEquivalent="c" id="qIS-W8-SiK">
+                                            <connections>
+                                                <segue destination="jJv-EF-wpz" kind="show" id="Y4W-xp-5cS"/>
+                                            </connections>
                                         </menuItem>
                                     </items>
                                 </menu>
@@ -84,6 +85,176 @@
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="-127"/>
+        </scene>
+        <!--嗨球排行榜-->
+        <scene sceneID="gqJ-GF-dW4">
+            <objects>
+                <viewController title="嗨球排行榜" showSeguePresentationStyle="single" id="jJv-EF-wpz" customClass="RankingListVieController" customModule="嗨球" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="KaC-TE-aoD">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="450"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="Xdg-D6-0Cq">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="409"/>
+                                <clipView key="contentView" id="Mex-hw-3TI">
+                                    <rect key="frame" x="0.0" y="23" width="300" height="386"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="MUz-dm-N8r" viewBased="YES" id="Jo4-kN-FDS">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="386"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableColumns>
+                                                <tableColumn identifier="gameDate" width="158.7265625" minWidth="40" maxWidth="1000" id="mUp-Jh-Sze">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="游戏时间">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="rAE-e0-paD">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <tableCellView id="bYP-Kz-jMw">
+                                                            <rect key="frame" x="1" y="1" width="159" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="MWo-3v-hD4">
+                                                                    <rect key="frame" x="29" y="0.0" width="101" height="17"/>
+                                                                    <animations/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="Table View Cell" id="db2-RO-92f">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="bYP-Kz-jMw" name="value" keyPath="gameDate" id="aXh-7j-oef"/>
+                                                                    </connections>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="MWo-3v-hD4" firstAttribute="centerX" secondItem="bYP-Kz-jMw" secondAttribute="centerX" id="nLk-tJ-Ndw"/>
+                                                                <constraint firstItem="MWo-3v-hD4" firstAttribute="centerY" secondItem="bYP-Kz-jMw" secondAttribute="centerY" id="xVS-Jb-lSX"/>
+                                                            </constraints>
+                                                            <animations/>
+                                                            <connections>
+                                                                <outlet property="textField" destination="MWo-3v-hD4" id="RSh-Dr-JwX"/>
+                                                            </connections>
+                                                        </tableCellView>
+                                                    </prototypeCellViews>
+                                                </tableColumn>
+                                                <tableColumn identifier="gameTime" width="135.5" minWidth="40" maxWidth="1000" id="xSa-KD-K64">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="坚持时间">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="9xA-cX-gHS">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <tableCellView id="uZ7-O4-L6Y">
+                                                            <rect key="frame" x="162.5" y="1" width="136" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="BXV-2U-voN">
+                                                                    <rect key="frame" x="17" y="0.0" width="101" height="17"/>
+                                                                    <animations/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="Table View Cell" id="fuS-BK-5cX">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="uZ7-O4-L6Y" name="value" keyPath="gameTime" id="61Z-A2-5Uf"/>
+                                                                    </connections>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="BXV-2U-voN" firstAttribute="centerX" secondItem="uZ7-O4-L6Y" secondAttribute="centerX" id="3tQ-42-GF9"/>
+                                                                <constraint firstItem="BXV-2U-voN" firstAttribute="centerY" secondItem="uZ7-O4-L6Y" secondAttribute="centerY" id="E9q-52-7yJ"/>
+                                                            </constraints>
+                                                            <animations/>
+                                                            <connections>
+                                                                <outlet property="textField" destination="BXV-2U-voN" id="fCn-3A-nAw"/>
+                                                            </connections>
+                                                        </tableCellView>
+                                                    </prototypeCellViews>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="jJv-EF-wpz" id="zC9-7N-Phg"/>
+                                                <outlet property="delegate" destination="jJv-EF-wpz" id="WrP-Dn-jOP"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <animations/>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="BUc-kv-DyU">
+                                    <rect key="frame" x="-100" y="-100" width="223" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="OIU-8O-9Ti">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </scroller>
+                                <tableHeaderView key="headerView" id="MUz-dm-N8r">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="23"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableHeaderView>
+                            </scrollView>
+                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sTP-dq-1pw">
+                                <rect key="frame" x="38" y="415" width="224" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="gZY-sD-mF3"/>
+                                    <constraint firstAttribute="height" constant="21" id="twU-Sh-SmS"/>
+                                </constraints>
+                                <animations/>
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="Vuf-Ab-KOD">
+                                    <font key="font" metaFont="system"/>
+                                    <segments>
+                                        <segment label="经典模式"/>
+                                        <segment label="普通模式" selected="YES" tag="1"/>
+                                        <segment label="道具模式"/>
+                                    </segments>
+                                </segmentedCell>
+                                <connections>
+                                    <action selector="segmentControlChanged:" target="jJv-EF-wpz" id="ljJ-5r-IPy"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="sTP-dq-1pw" firstAttribute="top" secondItem="KaC-TE-aoD" secondAttribute="top" constant="12" id="3We-av-Zgg"/>
+                            <constraint firstItem="sTP-dq-1pw" firstAttribute="centerX" secondItem="KaC-TE-aoD" secondAttribute="centerX" id="Z3A-wF-lKJ"/>
+                            <constraint firstItem="Xdg-D6-0Cq" firstAttribute="leading" secondItem="KaC-TE-aoD" secondAttribute="leading" id="cFF-sb-OCl"/>
+                            <constraint firstItem="Xdg-D6-0Cq" firstAttribute="top" secondItem="sTP-dq-1pw" secondAttribute="bottom" constant="8" id="k8z-Nh-cBF"/>
+                            <constraint firstAttribute="bottom" secondItem="Xdg-D6-0Cq" secondAttribute="bottom" id="nPe-84-tbV"/>
+                            <constraint firstAttribute="trailing" secondItem="Xdg-D6-0Cq" secondAttribute="trailing" id="sMG-eq-Lbb"/>
+                        </constraints>
+                        <animations/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Jo4-kN-FDS" id="3ak-aJ-WSb"/>
+                    </connections>
+                </viewController>
+                <customObject id="S6D-H1-9FB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="Sv4-cq-oo3"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="193"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">

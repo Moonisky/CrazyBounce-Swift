@@ -14,11 +14,11 @@ class FileManager {
     // MARK: 属性
     
     /// 经典模式最佳时间
-    var bestTimeClassic = 0
+    var bestTimeClassic = [String: Int]()
     /// 正常模式最佳时间
-    var bestTimeNormal = 0
+    var bestTimeNormal = [String: Int]()
     /// 道具模式最佳时间
-    var bestTimeIdems = 0
+    var bestTimeIdems = [String: Int]()
     
     /// 当前文件名称
     private var filename:String!
@@ -34,27 +34,51 @@ class FileManager {
     func loadFile() {
         if NSFileManager.defaultManager().fileExistsAtPath(filename) {
             guard let data = NSArray(contentsOfFile: filename) else { return }
-            bestTimeClassic = data.objectAtIndex(0) as! Int
-            bestTimeNormal = data.objectAtIndex(1) as! Int
-            bestTimeIdems = data.objectAtIndex(2) as! Int
+            
+            if let classic = data.objectAtIndex(0) as? [String: Int] {
+                bestTimeClassic = classic
+            }
+            if let normal = data.objectAtIndex(1) as? [String: Int] {
+                bestTimeNormal = normal
+            }
+            if let idem = data.objectAtIndex(2) as? [String: Int] {
+                bestTimeIdems = idem
+            }
+        } else {
+            NSMutableArray(capacity: 3).writeToFile(filename, atomically: true)
         }
-        print("file load over, the data is Classic:\(bestTimeClassic), Normal: \(bestTimeNormal), Items: \(bestTimeIdems)")
+        print("file load over, the best time in Classic Mode is:\(bestTimeClassic.values.sort().first), in Normal Mode is: \(bestTimeNormal.values.sort().first), in Items Mode is: \(bestTimeIdems.values.sort().first)")
     }
     
-    func writeFileOfMode(Mode: GameMode, WithTime time: Int){
-        let data = NSMutableArray()
+    func writeFileOfMode(Mode: GameMode, WithTime time: Int) {
+        guard let data = NSMutableArray(contentsOfFile: filename) else { return }
+        let date = NSDate().toString(format: "yyyy-MM-dd HH:mm:ss")
         switch Mode {
         case .Classic:
-            bestTimeClassic = time
+            guard var classic = data.objectAtIndex(0) as? [String: Int] else {
+                data.replaceObjectAtIndex(0, withObject: [date: time])
+                data.writeToFile(filename, atomically: true)
+                return
+            }
+            classic.updateValue(time, forKey: date)
+            data.replaceObjectAtIndex(0, withObject: classic)
         case .Normal:
-            bestTimeNormal = time
+            guard var normal = data.objectAtIndex(1) as? [String: Int] else {
+                data.replaceObjectAtIndex(1, withObject: [date: time])
+                data.writeToFile(filename, atomically: true)
+                return
+            }
+            normal.updateValue(time, forKey: date)
+            data.replaceObjectAtIndex(1, withObject: normal)
         case .Items:
-            bestTimeIdems = time
+            guard var item = data.objectAtIndex(2) as? [String: Int] else {
+                data.replaceObjectAtIndex(2, withObject: [date: time])
+                data.writeToFile(filename, atomically: true)
+                return
+            }
+            item.updateValue(time, forKey: date)
+            data.replaceObjectAtIndex(2, withObject: item)
         }
-        data.addObject(bestTimeClassic)
-        data.addObject(bestTimeNormal)
-        data.addObject(bestTimeIdems)
-        data.writeToFile(filename, atomically: true)
     }
     
     /// 文件路径函数

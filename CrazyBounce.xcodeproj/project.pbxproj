@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7359E1121A3437F700C5D6C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7359E1111A3437F700C5D6C0 /* AppDelegate.swift */; };
 		7359E11B1A3437F700C5D6C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7359E1191A3437F700C5D6C0 /* Main.storyboard */; };
+		D803DA521BE897160040C7E1 /* RankingListVieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803DA511BE897160040C7E1 /* RankingListVieController.swift */; };
+		D803DA541BE89A8E0040C7E1 /* Extension+DateHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803DA531BE89A8E0040C7E1 /* Extension+DateHandle.swift */; };
+		D803DA551BE89A8E0040C7E1 /* Extension+DateHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803DA531BE89A8E0040C7E1 /* Extension+DateHandle.swift */; };
 		D81FEAF61BE84C0B00088A01 /* GameOSExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81FEAF51BE84C0B00088A01 /* GameOSExtension.swift */; };
 		D826653F1BE73CFF0088FDE9 /* AllCleanBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665341BE73CFF0088FDE9 /* AllCleanBall.swift */; };
 		D82665401BE73CFF0088FDE9 /* AllCleanBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82665341BE73CFF0088FDE9 /* AllCleanBall.swift */; };
@@ -48,6 +51,8 @@
 		7359E11A1A3437F700C5D6C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7359E12A1A3437F700C5D6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7359E12B1A3437F700C5D6C0 /* CrazyBounceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyBounceTests.swift; sourceTree = "<group>"; };
+		D803DA511BE897160040C7E1 /* RankingListVieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingListVieController.swift; sourceTree = "<group>"; };
+		D803DA531BE89A8E0040C7E1 /* Extension+DateHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+DateHandle.swift"; sourceTree = "<group>"; };
 		D81FEAF51BE84C0B00088A01 /* GameOSExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOSExtension.swift; sourceTree = "<group>"; };
 		D82665341BE73CFF0088FDE9 /* AllCleanBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCleanBall.swift; sourceTree = "<group>"; };
 		D82665351BE73CFF0088FDE9 /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
@@ -154,6 +159,7 @@
 				D826653B1BE73CFF0088FDE9 /* FileManager.swift */,
 				D826653C1BE73CFF0088FDE9 /* GameElements.swift */,
 				D826653D1BE73CFF0088FDE9 /* GameScene.swift */,
+				D803DA531BE89A8E0040C7E1 /* Extension+DateHandle.swift */,
 				D826653E1BE73CFF0088FDE9 /* Images.xcassets */,
 			);
 			path = "Game Elements";
@@ -191,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				D826655C1BE7423A0088FDE9 /* GameSceneViewController.swift */,
+				D803DA511BE897160040C7E1 /* RankingListVieController.swift */,
 				D82665611BE748050088FDE9 /* Game Elements */,
 				D82665551BE7423A0088FDE9 /* AppDelegate.swift */,
 				D82665561BE7423A0088FDE9 /* Main.storyboard */,
@@ -363,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D83BBE391BE7174D00603000 /* WaterWaveView.swift in Sources */,
+				D803DA541BE89A8E0040C7E1 /* Extension+DateHandle.swift in Sources */,
 				D826654D1BE73CFF0088FDE9 /* GameElements.swift in Sources */,
 				D83BBE381BE7174D00603000 /* GameViewController.swift in Sources */,
 				D82665491BE73CFF0088FDE9 /* Bar.swift in Sources */,
@@ -388,7 +396,9 @@
 				D82665441BE73CFF0088FDE9 /* LongBarBall.swift in Sources */,
 				D826654A1BE73CFF0088FDE9 /* Bar.swift in Sources */,
 				D826655D1BE7423A0088FDE9 /* AppDelegate.swift in Sources */,
+				D803DA521BE897160040C7E1 /* RankingListVieController.swift in Sources */,
 				D81FEAF61BE84C0B00088A01 /* GameOSExtension.swift in Sources */,
+				D803DA551BE89A8E0040C7E1 /* Extension+DateHandle.swift in Sources */,
 				D82665631BE748200088FDE9 /* WaterWaveView.swift in Sources */,
 				D82665651BE74A850088FDE9 /* NSBezierPathExtension.swift in Sources */,
 				D82665481BE73CFF0088FDE9 /* SlowBall.swift in Sources */,
